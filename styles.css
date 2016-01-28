@@ -1,4 +1,10 @@
 /* <?php header("Content-type: text/css; charset: UTF-8");?> */
+
+/* 
+FINAL BUILD: .php FILE SO I CAN GET FONTS AND HEX CODES FROM SQL
+ECLIPE MARS DOES NOT LIKE PHP AND CSS FILES TOGETHER :(
+*/
+
 body {
 	margin: 0;
 } h1 {
@@ -24,7 +30,8 @@ body {
 	margin: 1em 0 1em 1em;
 	float: left;
 } .link {
-	display: inline-block;
+	display: inline-block; 
+	/*ADD VISIBILITY HIDDEN AND MAKE ANIMATION FROM HIDDEN TO VISIBLE*/
 	color: white; /*PHP*/
 	float: right;
 	font-size: 1em;
