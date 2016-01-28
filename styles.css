@@ -1,0 +1,35 @@
+/* <?php header("Content-type: text/css; charset: UTF-8");?> */
+body {
+	margin: 0;
+} h1 {
+	margin: 0;
+	font-family: 'Geo', 'Lobster', sans-serif; /*PHP*/
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;¨
+	-ms-user-select: none;
+	user-select: none;
+	cursor: default;
+	line-height: 0.9em;
+	color: white; /*PHP*/
+	font-size: 4em;
+} header {
+	height: 6em;
+	background-color: #262626; /*PHP*/
+	width: 100%;
+} #noge {
+	display: inline-block;
+	width: auto;
+	height: 4em;
+	margin: 1em 0 1em 1em;
+	float: left;
+} .link {
+	display: inline-block;
+	color: white; /*PHP*/
+	float: right;
+	font-size: 1em;
+	font-family: 'Helvetica', sans-serif; /*PHP*/
+	line-height: 1em;
+	font-weight: bold;
+	padding: 1.5em;
+}
