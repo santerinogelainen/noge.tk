@@ -5,6 +5,7 @@
 	<!-- links -->
 	<link rel="stylesheet" type="text/css" href="jquery/jquery-ui/jquery-ui.theme.min.css"/>
 	<link rel="stylesheet" type="text/css" href='styles.css'/>
+	<link rel="stylesheet" type="text/css" href='rng.css'/>
 	<!-- <link rel="stylesheet" type="css/layout.php" href="layout.php"/> -->
 	<link href='https://fonts.googleapis.com/css?family=Geo' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
