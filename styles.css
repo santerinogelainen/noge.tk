@@ -32,11 +32,17 @@ body {
 } .link {
 	display: inline-block; 
 	/*ADD VISIBILITY HIDDEN AND MAKE ANIMATION FROM HIDDEN TO VISIBLE*/
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;¨
+	-ms-user-select: none;
+	user-select: none;
+	cursor: default;
 	color: white; /*PHP*/
 	float: right;
 	font-size: 1em;
 	font-family: 'Helvetica', sans-serif; /*PHP*/
 	line-height: 1em;
 	font-weight: bold;
-	padding: 1.5em;
+	padding: 1.5em 2em 1.5em 2em;
 }
