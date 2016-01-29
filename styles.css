@@ -8,6 +8,7 @@ ECLIPE MARS DOES NOT LIKE PHP AND CSS FILES TOGETHER :(
 body {
 	margin: 0;
 } h1 {
+	/*LOGO*/
 	margin: 0;
 	font-family: 'Geo', 'Lobster', sans-serif; /*PHP*/
 	-webkit-touch-callout: none;
@@ -21,7 +22,7 @@ body {
 	font-size: 4em;
 } header {
 	height: 6em;
-	background-color: #262626; /*PHP*/
+	background-color: #404040; /*PHP*/
 	width: 100%;
 } #noge {
 	display: inline-block;
@@ -30,19 +31,41 @@ body {
 	margin: 1em 0 1em 1em;
 	float: left;
 } .link {
-	display: inline-block; 
-	/*ADD VISIBILITY HIDDEN AND MAKE ANIMATION FROM HIDDEN TO VISIBLE*/
+	/*TRANSITIONS*/
+	transition: all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-ms-transition: all 0.4s ease;
+	transition-property:opacity, padding;
+	-webkit-transition-property:opacity, padding, height;
+	-moz-transition-property:opacity, padding, height;
+	-ms-transition-property:opacity, padding, height;
+	padding: 1em 2em 1.5em 2em;
+	opacity: 0;
+	/*NO TEXT SELECTION AND DEFAULT CURSOR*/
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-moz-user-select: none;¨
 	-ms-user-select: none;
 	user-select: none;
 	cursor: default;
+	/*OTHER*/
+	display: inline-block;
 	color: white; /*PHP*/
 	float: right;
 	font-size: 1em;
 	font-family: 'Helvetica', sans-serif; /*PHP*/
 	line-height: 1em;
-	font-weight: bold;
+} header:hover > .link {
+	/*TRANSITION ALL ON HEADER HOVER EXCEPT BACKGROUND-COLOR (TOO SLOW)*/
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-ms-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+	transition-property:opacity, padding;
+	-webkit-transition-property:opacity, padding;
+	-moz-transition-property:opacity, padding;
+	-ms-transition-property:opacity, padding;
+	opacity: 1;
 	padding: 1.5em 2em 1.5em 2em;
 }
