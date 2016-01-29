@@ -1,1 +1,97 @@
 /* Script file randomly chooses the animation (on hover) for logo from this file */
+
+/*NORMAL*/
+
+@keyframes ani1 {
+	0% {color: #CCCC52;}
+	5.9% {color: #A3CC52;}
+	11% {color: #7ACC52;}
+	16.5% {color: #52CC52;}
+	22% {color: #52CC7A;}
+	27.5% {color: #52CCA3;}
+	33% {color: #00CCCC;}
+	38.5% {color: #29A3CC;}
+	44% {color: #297ACC;}
+	49.5% {color: #527ACC;}
+	55% {color: #7A7ACC;}
+	60.5% {color: #A352CC;}
+	66% {color: #CC52CC;}
+	71.5% {color: #CC52A3;}
+	77% {color: #CC527A;}
+	82.5% {color: #CC5252;}
+	88% {color: #CC7A52;}
+	93.5% {color: #CCA352;}
+	100% {color: #CCCC52;}
+}
+
+/*WEBKIT*/
+
+@-webkit-keyframes ani1 {
+	0% {color: #CCCC52;}
+	5.9% {color: #A3CC52;}
+	11% {color: #7ACC52;}
+	16.5% {color: #52CC52;}
+	22% {color: #52CC7A;}
+	27.5% {color: #52CCA3;}
+	33% {color: #00CCCC;}
+	38.5% {color: #29A3CC;}
+	44% {color: #297ACC;}
+	49.5% {color: #527ACC;}
+	55% {color: #7A7ACC;}
+	60.5% {color: #A352CC;}
+	66% {color: #CC52CC;}
+	71.5% {color: #CC52A3;}
+	77% {color: #CC527A;}
+	82.5% {color: #CC5252;}
+	88% {color: #CC7A52;}
+	93.5% {color: #CCA352;}
+	100% {color: #CCCC52;}
+}
+
+/*MOZ*/
+
+@-moz-keyframes ani1 {
+	0% {color: #CCCC52;}
+	5.9% {color: #A3CC52;}
+	11% {color: #7ACC52;}
+	16.5% {color: #52CC52;}
+	22% {color: #52CC7A;}
+	27.5% {color: #52CCA3;}
+	33% {color: #00CCCC;}
+	38.5% {color: #29A3CC;}
+	44% {color: #297ACC;}
+	49.5% {color: #527ACC;}
+	55% {color: #7A7ACC;}
+	60.5% {color: #A352CC;}
+	66% {color: #CC52CC;}
+	71.5% {color: #CC52A3;}
+	77% {color: #CC527A;}
+	82.5% {color: #CC5252;}
+	88% {color: #CC7A52;}
+	93.5% {color: #CCA352;}
+	100% {color: #CCCC52;}
+}
+
+/*MS*/
+
+@-ms-keyframes ani1 {
+	0% {color: #CCCC52;}
+	5.9% {color: #A3CC52;}
+	11% {color: #7ACC52;}
+	16.5% {color: #52CC52;}
+	22% {color: #52CC7A;}
+	27.5% {color: #52CCA3;}
+	33% {color: #00CCCC;}
+	38.5% {color: #29A3CC;}
+	44% {color: #297ACC;}
+	49.5% {color: #527ACC;}
+	55% {color: #7A7ACC;}
+	60.5% {color: #A352CC;}
+	66% {color: #CC52CC;}
+	71.5% {color: #CC52A3;}
+	77% {color: #CC527A;}
+	82.5% {color: #CC5252;}
+	88% {color: #CC7A52;}
+	93.5% {color: #CCA352;}
+	100% {color: #CCCC52;}
+}
