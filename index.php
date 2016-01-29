@@ -24,9 +24,14 @@
 		<span id="noge"><h1><?php echo getSQL("text", "text")[2]; ?></h1></span>
 		
 		<!-- MAKE THIS EASIER (FOR OR WHILE LOOP) -->
-		<span class="link" id="link1"><p><?php echo getSQL("title", "menu")[0];?></p></span>
-		<span class="link" id="link2"><p><?php echo getSQL("title", "menu")[1];?></p></span>
-		<span class="link" id="link3"><p><?php echo getSQL("title", "menu")[2];?></p></span>
+		<?php 
+			$count = count(getSQL("title", "menu")) - 1;
+			foreach (getSQL("title", "menu") as $value) {
+				global $count;
+				echo "<span class='link' id='link" . $value . "'><p>" . getSQL("title", "menu")[$count] . "</p></span>";
+				$count--;
+			}
+		?>
 		</header>
 		
 		<script src="script.js"></script>
