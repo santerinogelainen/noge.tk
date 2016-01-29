@@ -22,8 +22,6 @@
 	<body>
 		<header>
 		<span id="noge"><h1><?php echo getSQL("text", "text")[2]; ?></h1></span>
-		
-		<!-- MAKE THIS EASIER (FOR OR WHILE LOOP) -->
 		<?php 
 			$count = count(getSQL("title", "menu")) - 1;
 			foreach (getSQL("title", "menu") as $value) {
