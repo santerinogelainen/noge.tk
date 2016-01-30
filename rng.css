@@ -3,95 +3,63 @@
 /*NORMAL*/
 
 @keyframes ani1 {
-	0% {color: #CCCC52;}
-	5.9% {color: #A3CC52;}
-	11% {color: #7ACC52;}
-	16.5% {color: #52CC52;}
-	22% {color: #52CC7A;}
-	27.5% {color: #52CCA3;}
-	33% {color: #00CCCC;}
-	38.5% {color: #29A3CC;}
-	44% {color: #297ACC;}
-	49.5% {color: #527ACC;}
-	55% {color: #7A7ACC;}
-	60.5% {color: #A352CC;}
-	66% {color: #CC52CC;}
-	71.5% {color: #CC52A3;}
-	77% {color: #CC527A;}
-	82.5% {color: #CC5252;}
-	88% {color: #CC7A52;}
-	93.5% {color: #CCA352;}
-	100% {color: #CCCC52;}
+	0% {color: hsl(0, 100%, 50%);}
+	10% {color: hsl(36, 100%, 50%);}
+	20% {color: hsl(72, 100%, 50%);}
+	30% {color: hsl(108, 100%, 50%);}
+	40% {color: hsl(144, 100%, 50%);}
+	50% {color: hsl(180, 100%, 50%);}
+	60% {color: hsl(216, 100%, 50%);}
+	70% {color: hsl(252, 100%, 50%);}
+	80% {color: hsl(288, 100%, 50%);}
+	90% {color: hsl(324, 100%, 50%);}
+	100% {color: hsl(359, 100%, 50%);}
 }
 
 /*WEBKIT*/
 
 @-webkit-keyframes ani1 {
-	0% {color: #CCCC52;}
-	5.9% {color: #A3CC52;}
-	11% {color: #7ACC52;}
-	16.5% {color: #52CC52;}
-	22% {color: #52CC7A;}
-	27.5% {color: #52CCA3;}
-	33% {color: #00CCCC;}
-	38.5% {color: #29A3CC;}
-	44% {color: #297ACC;}
-	49.5% {color: #527ACC;}
-	55% {color: #7A7ACC;}
-	60.5% {color: #A352CC;}
-	66% {color: #CC52CC;}
-	71.5% {color: #CC52A3;}
-	77% {color: #CC527A;}
-	82.5% {color: #CC5252;}
-	88% {color: #CC7A52;}
-	93.5% {color: #CCA352;}
-	100% {color: #CCCC52;}
+	0% {color: hsl(0, 100%, 50%);}
+	10% {color: hsl(36, 100%, 50%);}
+	20% {color: hsl(72, 100%, 50%);}
+	30% {color: hsl(108, 100%, 50%);}
+	40% {color: hsl(144, 100%, 50%);}
+	50% {color: hsl(180, 100%, 50%);}
+	60% {color: hsl(216, 100%, 50%);}
+	70% {color: hsl(252, 100%, 50%);}
+	80% {color: hsl(288, 100%, 50%);}
+	90% {color: hsl(324, 100%, 50%);}
+	100% {color: hsl(359, 100%, 50%);}
 }
 
 /*MOZ*/
 
 @-moz-keyframes ani1 {
-	0% {color: #CCCC52;}
-	5.9% {color: #A3CC52;}
-	11% {color: #7ACC52;}
-	16.5% {color: #52CC52;}
-	22% {color: #52CC7A;}
-	27.5% {color: #52CCA3;}
-	33% {color: #00CCCC;}
-	38.5% {color: #29A3CC;}
-	44% {color: #297ACC;}
-	49.5% {color: #527ACC;}
-	55% {color: #7A7ACC;}
-	60.5% {color: #A352CC;}
-	66% {color: #CC52CC;}
-	71.5% {color: #CC52A3;}
-	77% {color: #CC527A;}
-	82.5% {color: #CC5252;}
-	88% {color: #CC7A52;}
-	93.5% {color: #CCA352;}
-	100% {color: #CCCC52;}
+	0% {color: hsl(0, 100%, 50%);}
+	10% {color: hsl(36, 100%, 50%);}
+	20% {color: hsl(72, 100%, 50%);}
+	30% {color: hsl(108, 100%, 50%);}
+	40% {color: hsl(144, 100%, 50%);}
+	50% {color: hsl(180, 100%, 50%);}
+	60% {color: hsl(216, 100%, 50%);}
+	70% {color: hsl(252, 100%, 50%);}
+	80% {color: hsl(288, 100%, 50%);}
+	90% {color: hsl(324, 100%, 50%);}
+	100% {color: hsl(359, 100%, 50%);}
 }
 
-/*MS*/
+/*MS NOT SURE IF NEEDED*/
 
 @-ms-keyframes ani1 {
-	0% {color: #CCCC52;}
-	5.9% {color: #A3CC52;}
-	11% {color: #7ACC52;}
-	16.5% {color: #52CC52;}
-	22% {color: #52CC7A;}
-	27.5% {color: #52CCA3;}
-	33% {color: #00CCCC;}
-	38.5% {color: #29A3CC;}
-	44% {color: #297ACC;}
-	49.5% {color: #527ACC;}
-	55% {color: #7A7ACC;}
-	60.5% {color: #A352CC;}
-	66% {color: #CC52CC;}
-	71.5% {color: #CC52A3;}
-	77% {color: #CC527A;}
-	82.5% {color: #CC5252;}
-	88% {color: #CC7A52;}
-	93.5% {color: #CCA352;}
-	100% {color: #CCCC52;}
+	0% {color: hsl(0, 100%, 50%);}
+	10% {color: hsl(36, 100%, 50%);}
+	20% {color: hsl(72, 100%, 50%);}
+	30% {color: hsl(108, 100%, 50%);}
+	40% {color: hsl(144, 100%, 50%);}
+	50% {color: hsl(180, 100%, 50%);}
+	60% {color: hsl(216, 100%, 50%);}
+	70% {color: hsl(252, 100%, 50%);}
+	80% {color: hsl(288, 100%, 50%);}
+	90% {color: hsl(324, 100%, 50%);}
+	100% {color: hsl(359, 100%, 50%);}
 }

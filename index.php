@@ -14,6 +14,7 @@
 	
 	<script src="jquery/jquery-1.12.0.min.js"></script>
 	<script src="jquery/jquery-ui/jquery-ui.min.js"></script>
+	<script src="bowser/bowser.min.js"></script>
 	
 	<?php
 	include 'connect.php';
@@ -22,7 +23,11 @@
 	</head>
 	<body>
 		<header>
-		<span id="noge"><h1><?php echo getSQL("text", "text")[2]; ?></h1></span>
+		<span id="noge">
+		<h1><?php echo getSQL("text", "text")[2]; ?></h1>
+		<h1><?php echo getSQL("text", "text")[2]; ?></h1>
+		</span>
+		
 		<?php 
 			$count = count(getSQL("title", "menu")) - 1;
 			foreach (getSQL("title", "menu") as $value) {
