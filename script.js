@@ -26,7 +26,7 @@ $(document).ready(function(){
 	
 	$("#noge").mouseenter(function(){
 		if (bowser.webkit){
-			var n = rng(6);
+			var n = rng(4);
 			if (n <= 2) {
 				getAni("colors_big.gif");
 			} else if (n <= 4 && n > 2) {
