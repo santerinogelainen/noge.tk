@@ -23,10 +23,10 @@
 	</head>
 	<body>
 		<header>
-		<span id="noge">
+		<a href="index.php"><span id="noge">
 		<h1><?php echo getSQL("text", "text")[2]; ?></h1>
 		<h1><?php echo getSQL("text", "text")[2]; ?></h1>
-		</span>
+		</span></a>
 		
 		<?php 
 			$count = count(getSQL("title", "menu")) - 1;

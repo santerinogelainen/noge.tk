@@ -17,7 +17,7 @@ body {
 	-moz-user-select: none;¨
 	-ms-user-select: none;
 	user-select: none;
-	cursor: default;
+	cursor: pointer;
 	line-height: 0.9em;
 	color: white; /*PHP*/
 	font-size: 4em;
