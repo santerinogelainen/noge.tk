@@ -15,6 +15,7 @@
 	<script src="jquery/jquery-1.12.0.min.js"></script>
 	<script src="jquery/jquery-ui/jquery-ui.min.js"></script>
 	<script src="bowser/bowser.min.js"></script>
+	<script src="instafeed/instafeed.min.js"></script>
 	
 	<?php
 	include 'connect.php';
@@ -37,6 +38,8 @@
 			}
 		?>
 		</header>
+		
+		<div id="instafeed"></div>
 		
 		<script src="script.js"></script>
 	</body>
