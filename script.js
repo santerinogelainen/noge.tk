@@ -13,28 +13,24 @@ $(document).ready(function(){
 		$("h1").css("background", "url(img/" + fName + ")");
 		$("h1").css("-webkit-background-clip", "text");
 		$("h1").css("-webkit-text-fill-color", "transparent");
-		$("h1").css("background-size", "2em auto");
-		$("h1").css("-webkit-background-size", "2em auto");
+		$("h1").css("background-size", "2.5em auto");
+		$("h1").css("-webkit-background-size", "2.5em auto");
 		$("h1").css("background-repeat", "no-repeat");
 	}
+	function rng(toNumber) {
+		var mr = new Date().getMilliseconds();
+		return Math.floor(mr * toNumber / 1000);
+	}
+	
+	
+	
 	$("#noge").mouseenter(function(){
-		/* this is probably really horrible sphagetti code but im bad */
 		if (bowser.webkit){
-			var mr = Math.floor(Math.random() * 14);
-			if (mr <= 2) {
-				getAni("sky.gif");
-			} else if (mr <= 4 && mr > 2) {
-				getAni("err.gif");
-			} else if (mr <= 6 && mr > 4) {
-				getAni("lightspeed.gif");
-			} else if (mr <= 8 && mr > 6) {
-				getAni("stars.gif");
-			} else if (mr <= 10 && mr > 8) {
-				getAni("subway.gif");
-			} else if (mr <= 12 && mr > 10) {
-				getAni("water.gif");
-			} else if (mr > 12) {
-			getAni("wave.gif");
+			var n = rng(6);
+			if (n <= 2) {
+				getAni("colors_big.gif");
+			} else if (n <= 4 && n > 2) {
+				getAni("colors_big_reverse.gif");
 			}
 		} else {
 			$("h1").css("animation", "ani1 8s infinite");
