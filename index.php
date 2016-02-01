@@ -18,8 +18,7 @@
 	<script src="instafeed/instafeed.min.js"></script>
 	
 	<?php
-	include 'connect.php';
-	include 'getSQL.php';
+	include 'script.php';
 	?>
 	</head>
 	<body>
@@ -38,7 +37,9 @@
 			}
 		?>
 		</header>
-		
+		<div>
+		<?php getIGPictures(5);?>
+		</div>
 		<div id="instafeed"></div>
 		
 		<script src="script.js"></script>

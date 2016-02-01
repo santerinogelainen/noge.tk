@@ -6,19 +6,6 @@ $(document).ready(function(){
 		$(this).css("background-color", "inherit");
 	});
 	
-	
-	/* var feed = new Instafeed({
-		get: 'user',
-		userId: '320370311',
-		useHttp: true,
-		accessToken: IG ACCESS TOKEN,
-		resolution: 'standard_resolution',
-		limit: '5',
-		sortBy: 'most-recent',
-		template: '<img src="{{image}}" class="ig_image"/><p class="ig_caption"></p>'
-	});
-	feed.run(); */
-	
 	/*Text animations only work on webkit browsers because background-clip: text; value is an unofficial value supported by webkit browsers*/
 	/*there is probably an easier way of doing this*/
 	function getAni(fName){
