@@ -23,22 +23,25 @@
 	</head>
 	<body>
 		<header>
-		<a href="index.php"><span id="noge">
-		<h1><?php echo getSQL("text", "text")[2]; ?></h1>
-		<h1><?php echo getSQL("text", "text")[2]; ?></h1>
-		</span></a>
-		
+		<div id="logo">
+		<a href="index.php" id="logo_link">
+		<h1 class="noge"><?php echo getSQL("text", "text")[2]; ?></h1>
+		<h1 class="noge"><?php echo getSQL("text", "text")[2]; ?></h1>
+		</a>
+		</div>
+		<div id="links">
 		<?php 
 			$count = count(getSQL("title", "menu")) - 1;
 			foreach (getSQL("title", "menu") as $value) {
 				global $count;
-				echo "<span class='link' id='link" . $value . "'><p>" . getSQL("title", "menu")[$count] . "</p></span>";
+				echo "<span class='link'>" . getSQL("title", "menu")[$count] . "</span>";
 				$count--;
 			}
 		?>
+		</div>
 		</header>
 		<div>
-		<?php getIGPictures(5);?>
+		<?php ?>
 		</div>
 		<div id="instafeed"></div>
 		

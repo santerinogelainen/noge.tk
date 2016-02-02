@@ -12,8 +12,8 @@ $(document).ready(function(){
 		$("h1").css("background", "url(img/" + fName + ")");
 		$("h1").css("-webkit-background-clip", "text");
 		$("h1").css("-webkit-text-fill-color", "transparent");
-		$("h1").css("background-size", "2.5em auto");
-		$("h1").css("-webkit-background-size", "2.5em auto");
+		$("h1").css("background-size", "33.12vh auto");
+		$("h1").css("-webkit-background-size", "33.12vh auto");
 		$("h1").css("background-repeat", "no-repeat");
 	}
 	function rng(toNumber) {
@@ -21,9 +21,7 @@ $(document).ready(function(){
 		return Math.floor(mr * toNumber / 1000);
 	}
 	
-	
-	
-	$("#noge").mouseenter(function(){
+	$(".noge").mouseenter(function(){
 		if (bowser.webkit){
 			var n = rng(4);
 			if (n <= 2) {
@@ -38,7 +36,7 @@ $(document).ready(function(){
 		}
 		
 	});
-	$("#noge").mouseleave(function(){
+	$(".noge").mouseleave(function(){
 		$("h1").css("background", "");
 		$("h1").css("-webkit-background-clip", "");
 		$("h1").css("-webkit-text-fill-color", "");

@@ -5,12 +5,31 @@ FINAL BUILD: .php FILE SO I CAN GET FONTS AND HEX CODES FROM SQL OR JSON
 ECLIPE MARS DOES NOT LIKE PHP AND CSS FILES TOGETHER :(
 */
 
+html {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+}
 body {
 	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 100%;
+} header {
+	height: 18vh;
+	padding: 0;
+	width: 100%;
+	background-color: #404040; /*PHP*/
+} #logo {
+	width: 21vh;
+	height: 11.12vh;
+	margin: auto;
 } h1 {
 	/*LOGO*/
 	position: absolute;
-	margin: 0;
+	display: inline;
+	margin: -1vh 0 0 0;
 	font-family: 'Geo', 'Lobster', sans-serif; /*PHP*/
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -18,33 +37,21 @@ body {
 	-ms-user-select: none;
 	user-select: none;
 	cursor: pointer;
-	line-height: 0.9em;
 	color: white; /*PHP*/
-	font-size: 4em;
-	z-index: 1;
-	font-weight: bold;
-} header {
-	height: 6em;
-	background-color: #404040; /*PHP*/
-	width: 100%;
-} #noge {
-	display: inline-block;
-	width: auto;
-	height: 4em;
-	margin: 1em 0 1em 1em;
-	float: left;
+	font-size: 11.12vh;
 } .link {
 	/*TRANSITIONS*/
 	transition: all 0.4s ease;
 	-webkit-transition: all 0.4s ease;
 	-moz-transition: all 0.4s ease;
 	-ms-transition: all 0.4s ease;
-	transition-property:opacity, padding;
+	transition-property:opacity, padding, height;
 	-webkit-transition-property:opacity, padding, height;
 	-moz-transition-property:opacity, padding, height;
 	-ms-transition-property:opacity, padding, height;
-	padding: 1em 2em 1.5em 2em;
 	opacity: 0;
+	padding: 1.5vh 2vh 0 2vh;
+	height: 5.38vh;
 	/*NO TEXT SELECTION AND DEFAULT CURSOR*/
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -53,34 +60,29 @@ body {
 	user-select: none;
 	cursor: default;
 	/*OTHER*/
-	display: inline-block;
+	display: table-cell;
+	font-size: 2.44vh;
+	line-height: 2.44vh;
 	color: white; /*PHP*/
-	float: right;
-	font-size: 1em;
 	font-family: 'Helvetica', sans-serif; /*PHP*/
-	line-height: 1em;
-} header:hover > .link {
-	/*TRANSITION ALL ON HEADER HOVER EXCEPT BACKGROUND-COLOR (TOO SLOW)*/
+} #links {
+	display: table;
+	border-spacing: 0;
+	border: none;
+	margin: auto;
+}  header:hover > #links .link {
 	-webkit-transition: all 0.4s ease;
 	-moz-transition: all 0.4s ease;
 	-ms-transition: all 0.4s ease;
 	transition: all 0.4s ease;
-	transition-property:opacity, padding;
-	-webkit-transition-property:opacity, padding;
-	-moz-transition-property:opacity, padding;
-	-ms-transition-property:opacity, padding;
+	transition-property:opacity, padding, height;
+	-webkit-transition-property:opacity, padding, height;
+	-moz-transition-property:opacity, padding, height;
+	-ms-transition-property:opacity, padding, height;
 	opacity: 1;
-	padding: 1.5em 2em 1.5em 2em;
-}.addToBLogo {
-	animation: logoShadow 1s;
-	-webkit-animation: logoShadow 1s;
-	-moz-animation: logoShadow 1s;
-	-ms-animation: logoShadow 1s;
-	animation-fill-mode: backwards;
-	-webkit-animation-fill-mode: backwards;
-	-moz-animation-fill-mode: backwards;
-	-ms-animation-fill-mode: backwards;
-} #noge:hover > h1:nth-child(1) {
+	padding: 2.63vh 2vh 0 2vh;
+	height: 4.25vh;
+}  #logo_link:hover > h1:nth-child(1){
 	text-shadow: -1px 0 4px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.5), 1px 0 4px rgba(0, 0, 0, 0.5), 0 -1px 4px rgba(0, 0, 0, 0.5);
 } .ig_image {
 	margin: 0;
