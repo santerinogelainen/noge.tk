@@ -12,8 +12,8 @@ $(document).ready(function(){
 		$("h1").css("background", "url(img/" + fName + ")");
 		$("h1").css("-webkit-background-clip", "text");
 		$("h1").css("-webkit-text-fill-color", "transparent");
-		$("h1").css("background-size", "33.12vh auto");
-		$("h1").css("-webkit-background-size", "33.12vh auto");
+		$("h1").css("background-size", "90vh auto");
+		$("h1").css("-webkit-background-size", "90vh auto");
 		$("h1").css("background-repeat", "no-repeat");
 	}
 	function rng(toNumber) {
@@ -30,9 +30,7 @@ $(document).ready(function(){
 				getAni("colors_big_reverse.gif");
 			}
 		} else {
-			$("h1").css("animation", "ani1 8s infinite");
-			$("h1").css("-moz-animation", "ani1 8s infinite");
-			$("h1").css("-ms-animation", "ani1 8s infinite");
+			$("h1").addClass("class");
 		}
 		
 	});
@@ -43,8 +41,28 @@ $(document).ready(function(){
 		$("h1").css("background-size", "");
 		$("h1").css("-webkit-background-size", "");
 		$("h1").css("background-repeat", "");
-		$("h1").css("animation", "");
-		$("h1").css("-moz-animation", "");
-		$("h1").css("-ms-animation", "");
+		$("h1").removeClass("class");
 	});
+	
+	/* LOGO STUCK ON HIT TOP */
+	var howMuchTop = $("h1").offset().top;
+	console.log(howMuchTop);
+	function fixLogo() {
+		var sT = $(window).scrollTop();
+		if (sT > howMuchTop) {
+			$("#logo").css("position", "fixed");
+			if (bowser.msie || bowser.msedge) {
+				$("#logo").css("animation", "posIE 0.5 forwards");
+			} else {
+				$("#logo").css("animation", "posX 0.5s forwards");
+			}
+			$("h1").css("animation", "fontS 0.5s forwards");
+		} else {
+			$("#logo").css("position", "");
+			$("#logo").css("animation", "");
+			$("h1").css("animation", "");
+		}
+	}
+	$(window).scroll(fixLogo);
+	fixLogo();
 });

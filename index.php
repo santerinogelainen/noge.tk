@@ -15,7 +15,6 @@
 	<script src="jquery/jquery-1.12.0.min.js"></script>
 	<script src="jquery/jquery-ui/jquery-ui.min.js"></script>
 	<script src="bowser/bowser.min.js"></script>
-	<script src="instafeed/instafeed.min.js"></script>
 	
 	<?php
 	include 'script.php';
@@ -23,12 +22,6 @@
 	</head>
 	<body>
 		<header>
-		<div id="logo">
-		<a href="index.php" id="logo_link">
-		<h1 class="noge"><?php echo getSQL("text", "text")[2]; ?></h1>
-		<h1 class="noge"><?php echo getSQL("text", "text")[2]; ?></h1>
-		</a>
-		</div>
 		<div id="links">
 		<?php 
 			$count = count(getSQL("title", "menu")) - 1;
@@ -40,10 +33,17 @@
 		?>
 		</div>
 		</header>
-		<div>
-		<?php ?>
+		<div id="logo">
+		<a href="index.php" id="logo_link">
+		<h1 class="noge"><?php echo getSQL("text", "text")[2]; ?></h1>
+		<h1 class="noge"><?php echo getSQL("text", "text")[2]; ?></h1>
+		</a>
 		</div>
-		<div id="instafeed"></div>
+		<video id="background-video" autoplay loop muted>
+			<source src="img/water.mp4" type="video/mp4"/>
+		</video>
+		<div id="whitespace">
+		</div>
 		
 		<script src="script.js"></script>
 	</body>

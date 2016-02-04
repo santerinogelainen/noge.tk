@@ -4,15 +4,15 @@
 
 	$config = array(
 			"IG" => array(
-				"IGtoken" => "your_ig_token"
+				"IGtoken" => "IGtoken"
 			),
 			"MYSQL" => array(
-					"ip" => "your_mysql_database_ip",
-					"username" => "your_mysql_database_username",
-					"password" => "your_mysql_database_password",
-					"database" => "your_mysql_database"
+					"ip" => "IP",
+					"username" => "username",
+					"password" => "password",
+					"database" => "database"
 			),
-			"maintenance" => array(
+			"maintanence" => array(
 					"on" => true,
 					"message" => array (
 							1 => "Coming soon...",
