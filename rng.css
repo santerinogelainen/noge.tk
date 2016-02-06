@@ -15,22 +15,6 @@
 	90% {color: hsl(324, 100%, 50%);}
 	100% {color: hsl(359, 100%, 50%);}
 }
-@keyframes posX {
-	from {transform: translateX(-25vh);
-	top: -16vh;}
-	to {transform: translateX(-10vh);
-	top: -18vh;}
-}
-@keyframes fontS {
-	from {font-size: 25vh;}
-	to {font-size: 10vh;}
-}
-@keyframes posIE {
-	from {transform: translateX(-25vh);
-	top: -15vh;}
-	to {transform: translateX(-10vh);
-	top: -8vh;}
-}
 
 /*WEBKIT*/
 
@@ -46,16 +30,6 @@
 	80% {color: hsl(288, 100%, 50%);}
 	90% {color: hsl(324, 100%, 50%);}
 	100% {color: hsl(359, 100%, 50%);}
-}
-@-webkit-keyframes posX {
-	from {transform: translateX(-25vh);
-	top: -16vh;}
-	to {transform: translateX(-10vh);
-	top: -18vh;}
-}
-@-webkit-keyframes fontS {
-	from {font-size: 25vh;}
-	to {font-size: 10vh;}
 }
 
 /*MOZ*/
@@ -73,16 +47,6 @@
 	90% {color: hsl(324, 100%, 50%);}
 	100% {color: hsl(359, 100%, 50%);}
 }
-@-moz-keyframes posX {
-	from {transform: translateX(-25vh);
-	top: -15vh;}
-	to {transform: translateX(-10vh);
-	top: -8vh;}
-}
-@-moz-keyframes fontS {
-	from {font-size: 25vh;}
-	to {font-size: 10vh;}
-}
 
 /*MS NOT SURE IF NEEDED*/
 
@@ -98,14 +62,4 @@
 	80% {color: hsl(288, 100%, 50%);}
 	90% {color: hsl(324, 100%, 50%);}
 	100% {color: hsl(359, 100%, 50%);}
-}
-@-ms-keyframes posX {
-	from {transform: translateX(-25vh);
-	top: -15vh;}
-	to {transform: translateX(-10vh);
-	top: -8vh;}
-}
-@-ms-keyframes fontS {
-	from {font-size: 25vh;}
-	to {font-size: 10vh;}
 }

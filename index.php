@@ -6,9 +6,6 @@
 	<link rel="stylesheet" type="text/css" href="jquery/jquery-ui/jquery-ui.theme.min.css"/>
 	<link rel="stylesheet" type="text/css" href='rng.css'/>
 	<link rel="stylesheet" type="text/css" href='styles.css'/>
-	<!-- <link rel="stylesheet" type="css/layout.php" href="layout.php"/> -->
-	<link href='https://fonts.googleapis.com/css?family=Geo' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 	<!-- links end -->
 	
@@ -21,28 +18,26 @@
 	?>
 	</head>
 	<body>
+		<div id="TOP"></div>
 		<header>
-		<div id="links">
 		<?php 
 			$count = count(getSQL("title", "menu")) - 1;
 			foreach (getSQL("title", "menu") as $value) {
 				global $count;
-				echo "<span class='link'>" . getSQL("title", "menu")[$count] . "</span>";
+				echo "<a href='#" . getSQL("title", "menu")[$count] . "'><span class='link'>" . getSQL("title", "menu")[$count] . "</span></a>";
 				$count--;
 			}
 		?>
-		</div>
 		</header>
-		<div id="logo">
 		<a href="index.php" id="logo_link">
 		<h1 class="noge"><?php echo getSQL("text", "text")[2]; ?></h1>
 		<h1 class="noge"><?php echo getSQL("text", "text")[2]; ?></h1>
 		</a>
-		</div>
-		<video id="background-video" autoplay loop muted>
-			<source src="img/water.mp4" type="video/mp4"/>
-		</video>
-		<div id="whitespace">
+		<img src="img/illuminati_s1.jpg" id="fixedImg"/>
+		<div id="whitespace_INFO">
+		<a href="#TOP"><h2 id="info_T"><?php echo getSQL ("title", "menu")[0];?></h2></a>
+		<div id="INFO"></div>
+		<img id="profile_photo" src="https://api.tumblr.com/v2/blog/santerinogelainen.tumblr.com/avatar/512"/>
 		</div>
 		
 		<script src="script.js"></script>
