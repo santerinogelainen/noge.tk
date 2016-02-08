@@ -7,38 +7,39 @@ $(document).ready(function(){
 	$(".link").mouseleave(function () {
 		$(this).css("background-color", "inherit");
 	});
-	
-	var posL = $("h1").offset().top;
-	var posI = $("#info_T").offset().top;
-	function fixI() {
-		var top = $(window).scrollTop();
-		if (top >= posI) {
-			$("#info_T").css("position", "fixed");
-			$("#info_T").css("top", "-1.5vh");
-			$("h1").css("top", "-200vh");
-		} else {
-			$("#info_T").css("position", "absolute");
-			$("#info_T").css("top", "auto");
-			if (top >= posL) {
-				$("h1").css("top", "-1.5vh");
+	function scrollLock(fix, prev, prevTop) {
+		var posF = $(fix).offset().top;
+		if (typeof prev !== 'undefined') {
+				var posP = $(prev).offset().top;
+		}
+		$(window).resize(function() {
+			posF = $(fix).offset().top;
+			if (typeof prev !== 'undefined') {
+				posP = $(prev).offset().top;
+			}
+		});
+		return function () {
+			var top = $(this).scrollTop();
+			if (top >= posF) {
+				$(fix).css("position", "fixed");
+				$(fix).css("top", "-1.5vh");
+				if (typeof prev !== 'undefined') {
+					$(prev).css("top", "-200vh");
+				}
 			} else {
-				$("h1").css("top", "25vh");
+				$(fix).css("position", "absolute");
+				$(fix).css("top", "");
+				if (top >= posP && typeof prev !== 'undefined') {
+					$(prev).css("top", "-1.5vh");
+				} else if (typeof prev !== 'undefined') {
+					$(prev).css("top", prevTop);
+				}
 			}
 		}
 	}
+	scrollLock("h1");
+	$(window).scroll(scrollLock("h1"));
+	scrollLock("#info_T", "h1", "25vh");
+	$(window).scroll(scrollLock("#info_T", "h1", "25vh"));
 	
-	function fixL() {
-		var top = $(window).scrollTop();
-		if (top >= posL) {
-			$("h1").css("position", "fixed");
-			$("h1").css("top", "-1.5vh");
-		} else {
-			$("h1").css("position", "absolute");
-			$("h1").css("top", "25vh");
-		}
-	}
-	$(window).scroll(fixL);
-	fixL();
-	$(window).scroll(fixI);
-	fixI();
 });

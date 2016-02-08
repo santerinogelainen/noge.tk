@@ -11,7 +11,6 @@
 	
 	<script src="jquery/jquery-1.12.0.min.js"></script>
 	<script src="jquery/jquery-ui/jquery-ui.min.js"></script>
-	<script src="bowser/bowser.min.js"></script>
 	
 	<?php
 	include 'script.php';
