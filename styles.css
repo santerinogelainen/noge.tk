@@ -142,4 +142,9 @@ body {
 	margin: 26.5vh 16.5vh 0 0;
 	border-radius: 30vh;
 	border: 1px solid black;
+} #hamburger {
+	display: none;
+	position: absolute;
+	top: 0;
+	float: right;
 }

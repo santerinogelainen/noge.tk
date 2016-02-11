@@ -27,6 +27,12 @@
 				$count--;
 			}
 		?>
+		<svg id="hamburger" height="60%" viewBox="0 0 600 600" xml:space="preserve">
+		<rect x="77.5" y="95.5" style="&st0;" width="445" height="109"/>
+		<rect x="77.5" y="395.5" style="&st0;" width="445" height="109"/>
+		<rect x="77.5" y="245.5" style="&st0;" width="445" height="109"/>
+		</svg>
+
 		</header>
 		<a href="index.php" id="logo_link">
 		<h1 class="noge"><?php echo getSQL("text", "text")[2]; ?></h1>
