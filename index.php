@@ -18,21 +18,30 @@
 	</head>
 	<body>
 		<div id="TOP"></div>
-		<header>
+		<div id="pop-menu">
 		<?php 
-			$count = count(getSQL("title", "menu")) - 1;
-			foreach (getSQL("title", "menu") as $value) {
-				global $count;
-				echo "<a href='#" . getSQL("title", "menu")[$count] . "'><span class='link'>" . getSQL("title", "menu")[$count] . "</span></a>";
-				$count--;
-			}
+				$cm = 0;
+				foreach (getSQL("title", "menu") as $value) {
+					echo "<a href='#" . getSQL("title", "menu")[$cm] . "'><span class='pop-link'>" . getSQL("title", "menu")[$cm] . "</span></a>";
+					$cm++;
+				}
 		?>
+		</div>
+		<div id="pop-back"></div>
+		<header>
+			<?php 
+				$count = count(getSQL("title", "menu")) - 1;
+				foreach (getSQL("title", "menu") as $value) {
+					global $count;
+					echo "<a href='#" . getSQL("title", "menu")[$count] . "'><span class='link'>" . getSQL("title", "menu")[$count] . "</span></a>";
+					$count--;
+				}
+			?>
 		<svg id="hamburger" height="60%" viewBox="0 0 600 600" xml:space="preserve">
-		<rect x="77.5" y="95.5" style="&st0;" width="445" height="109"/>
-		<rect x="77.5" y="395.5" style="&st0;" width="445" height="109"/>
-		<rect x="77.5" y="245.5" style="&st0;" width="445" height="109"/>
+			<rect x="77.5" y="95.5" style="&st0;" width="445" height="109"/>
+			<rect x="77.5" y="395.5" style="&st0;" width="445" height="109"/>
+			<rect x="77.5" y="245.5" style="&st0;" width="445" height="109"/>
 		</svg>
-
 		</header>
 		<a href="index.php" id="logo_link">
 		<h1 class="noge"><?php echo getSQL("text", "text")[2]; ?></h1>
