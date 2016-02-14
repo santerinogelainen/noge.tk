@@ -14,19 +14,19 @@ $(document).ready(function(){
 		$(this).css("background-color", "inherit");
 	});
 	
-	function fixFirst(fix) {
-		var pos = $(fix).offset().top;
+	function fixFirst(h1) {
+		var pos = $(h1).offset().top;
 		$(window).resize(function(){
-			pos = $(fix).offset().top;
+			pos = $(h1).offset().top;
 		});
 		return function () {
 			var top = $(this).scrollTop();
 			if (top >= pos) {
-				$(fix).css("position", "fixed");
-				$(fix).css("top", "-1.5vh");
+				$(h1).css("position", "fixed");
+				$(h1).css("top", "-1.5vh");
 			} else {
-				$(fix).css("position", "absolute");
-				$(fix).css("top", "");
+				$(h1).css("position", "absolute");
+				$(h1).css("top", "");
 			}
 		}
 	}
