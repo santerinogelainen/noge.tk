@@ -12,12 +12,9 @@ You also need to modify the config.php file.
 
 - `IG`
 - `IGtoken` - Your [instagram token](http://instagram.pixelunion.net)
+	(ig not used yet)
 - `MYSQL`
 - `ip` - Your mysql database ip address.
 - `username` - Your mysql database user.
 - `password` - Your mysql database user password.
 - `database` - Your mysql database.
-- `maintanence`
-- `boolean` - Is the website having maintenance?
-- `message` - The message to display if the website is having maintenance.
-- You can add your own. (Integer => "Message")
