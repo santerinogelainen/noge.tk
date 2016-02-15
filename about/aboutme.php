@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href='rng.css'/>
 	<link rel="stylesheet" type="text/css" href='styles.css'/>
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Abril+Fatface&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<!-- links end -->
 	
 	<script src="../jquery/jquery-1.12.0.min.js"></script>
