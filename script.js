@@ -16,64 +16,45 @@ $(document).ready(function(){
 	
 	function fixFirst(h1) {
 		var pos = $(h1).offset().top;
-		$(window).resize(function(){
-			pos = $(h1).offset().top;
+		var dif = $(window).height() * 0.175;
+		var df = pos - dif;
+		setInterval(function () {
+			var topR = $(window).scrollTop();
+			dif = $(window).height() * 0.175;
+			df = pos - dif;
+			if (topR < pos) {
+				pos = $(h1).offset().top;
+			}
+		},1000)
+		$(window).resize(function () {
+			var topR = $(window).scrollTop();
+			dif = $(window).height() * 0.17;
+			df = pos - dif;
+			if (topR < pos) {
+				pos = $(h1).offset().top;
+			}
 		});
 		return function () {
-			var top = $(this).scrollTop();
+			var top = $(window).scrollTop();
 			if (top >= pos) {
 				$(h1).css("position", "fixed");
 				$(h1).css("top", "-1.5vh");
+				$(h1).css("color", "hsl(360, 0%, 0%)");
 			} else {
 				$(h1).css("position", "absolute");
 				$(h1).css("top", "");
+				$(h1).css("color", "hsl(360, 0%, 100%)");
+			}
+			if (top > dif && top < pos) {
+				var posD = top - dif;
+				var perC = (1 - posD / df) * 100;
+				$("h1").css("color", "hsl(360, 0%, " + perC.toString() + "%)");
 			}
 		}
 	}
 	
-	
-	function scrollLock(fix, prev) {
-		var posF = $(fix).offset().top;
-		var posP = $(prev).offset().top;
-
-		var posSF = $(fix).offset().top;
-		var posSP = $(prev).offset().top;
-		
-		var sh = $(window).height();
-		
-		$(window).resize(function() {
-			posF = $(fix).offset().top;
-			posP = $(prev).offset().top;
-
-			posSF = $(fix).offset().top;
-			posSP = $(prev).offset().top;
-			
-			sh = $(window).height();
-		});
-		
-		return function () {
-			posSF = $(fix).offset().top;
-			posSP = $(prev).offset().top;
-			sh = $(window).height();
-			var posU = (posSP - (posSF - (sh * 0.13)));
-			var top = $(this).scrollTop();
-			if (posU > sh * 0.015) {
-				$(prev).css("top", -posU.toString() + "px");
-			}
-			if (top >= posF) {
-				$(fix).css("position", "fixed");
-				$(fix).css("top", "-1.5vh");
-			} else {
-				$(fix).css("position", "absolute");
-				$(fix).css("top", "");
-			}
-		}
-	}
-	
-	fixFirst("h1");
 	$(window).scroll(fixFirst("h1"));
-	scrollLock("#info_T", "h1");
-	$(window).scroll(scrollLock("#info_T", "h1", "25vh"));
+	fixFirst("h1");
 	$('img').on('dragstart', function(event) { event.preventDefault(); });
 	
 	
@@ -93,4 +74,5 @@ $(document).ready(function(){
 		$("#pop-back").css("opacity", "0");
 		$("#pop-menu").css("opacity", "0");
 	});
+	
 });

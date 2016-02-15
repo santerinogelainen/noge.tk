@@ -37,7 +37,7 @@ body {
 	-ms-user-select: none;
 	user-select: none;
 	cursor: pointer;
-	color: white; /*PHP*/
+	color: black; /*PHP*/
 	font-size: 9vh;
 	margin: 0;
 	padding: 0;
@@ -77,8 +77,6 @@ body {
 	opacity: 1;
 	padding: 4vh 2% 0 2%;
 	height: 6vh;
-} h1:nth-child(1){
-	text-shadow: -1px 1px 4px rgba(0, 0, 0, 0.5), 1px 1px 4px rgba(0, 0, 0, 0.5), 1px 1px 4px rgba(0, 0, 0, 0.5), 1px -1px 4px rgba(0, 0, 0, 0.5);
 } .ig_image {
 	margin: 0;
 	padding: 0;

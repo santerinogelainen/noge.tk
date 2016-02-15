@@ -44,7 +44,6 @@
 			</svg>
 			<a href="/" id="logo_link">
 				<h1 class="noge"><?php echo getSQL("text", "text")[2]; ?></h1>
-				<h1 class="noge"><?php echo getSQL("text", "text")[2]; ?></h1>
 			</a>
 		</header>
 		<div id="soon"><span>S</span><span>o</span><span>o</span><span>n</span><span>&trade;</span></div>
