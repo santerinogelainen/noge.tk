@@ -50,7 +50,7 @@
 		<img src="img/illuminati_s1.jpg" id="fixedImg"/>
 		
 		<div class="whitespace" id="whitespace_INFO">
-		<a href="#TOP"><h2><?php echo getSQL ("title", "menu")[0];?></h2></a>
+		<a href="/"><h2><?php echo getSQL ("title", "menu")[0];?></h2></a>
 		<div id="INFO"></div>
 		<div id="profile_title">
 			<img id="profile_photo" src="https://api.tumblr.com/v2/blog/santerinogelainen.tumblr.com/avatar/512"/>
@@ -70,7 +70,9 @@
 		</div>
 		</div>
 		
-		<img class="fixImg2" src="img/jarvi2.jpg"/>
+		<div id="fixedImgView">
+			<img class="fixImg2" src="img/jarvi2.jpg"/>
+		</div>
 		
 		<div class="whitespace" id="whitespace_LINKS">
 			<a href="#TOP"><h2><?php echo getSQL ("title", "menu")[1];?></h2></a>
@@ -79,61 +81,6 @@
 			<div id="soon"><span>S</span><span>o</span><span>o</span><span>n</span><span>&trade;</span></div>
 		</div>
 		
-		<script src="script.js">
-
-		/*SPAGHETTI!!!! temporary but i like the animation so i might make this into a proper function that does this automatically*/
-		
-		setInterval(function () {
-			$("span:nth-child(1)").animate({
-				top: "-=3vh"
-			}, 200);
-			setTimeout(function(){
-				$("span:nth-child(1)").animate({
-					top: "+=3vh"
-				}, 200);
-			}, 200);
-			setTimeout( function(){
-				$("span:nth-child(2)").animate({
-					top: "-=3vh"
-				}, 200);
-				setTimeout(function(){
-					$("span:nth-child(2)").animate({
-						top: "+=3vh"
-					}, 200);
-				}, 200);
-			},100);
-			setTimeout( function(){
-				$("span:nth-child(3)").animate({
-					top: "-=3vh"
-				}, 200);
-				setTimeout(function(){
-					$("span:nth-child(3)").animate({
-						top: "+=3vh"
-					}, 200);
-				}, 200);
-			},200);
-			setTimeout( function(){
-				$("span:nth-child(4)").animate({
-					top: "-=3vh"
-				}, 200);
-				setTimeout(function(){
-					$("span:nth-child(4)").animate({
-						top: "+=3vh"
-					}, 200);
-				}, 200);
-			},300);
-			setTimeout( function(){
-				$("span:nth-child(5)").animate({
-					top: "-=3vh"
-				}, 200);
-				setTimeout(function(){
-					$("span:nth-child(5)").animate({
-						top: "+=3vh"
-					}, 200);
-				}, 200);
-			},400);
-		},1500);
-		
-		</script>
+		<script src="script.js"></script>
 	</body>
 </html>

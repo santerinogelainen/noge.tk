@@ -5,19 +5,24 @@ FINAL BUILD: .php FILE SO I CAN GET FONTS AND HEX CODES FROM SQL OR JSON
 ECLIPE MARS DOES NOT LIKE PHP AND CSS FILES TOGETHER :(
 */
 
+/* HTML AND BODY */
+
 html {
 	height: auto;
 	width: 100%;
 	font-size: 100%;
-}
-body {
+} body {
 	margin: 0;
 	padding: 0;
 	width: 100%;
 	height: auto;
 	background-color: black;
 	font-family: 'Raleway', sans-serif;
-} header {
+}
+
+/* HEADERS */
+
+header {
 	height: 10%;
 	padding: 0;
 	width: 100%;
@@ -43,7 +48,80 @@ body {
 	margin: 0;
 	padding: 0;
 	z-index: 101;
-} .link {
+} h2 {
+	position: absolute;
+	z-index: 1;
+	display: inline-block;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 9vh;
+	font-family: 'Playfair Display SC', sans-serif;
+	margin: 0;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* WHITESPACE */
+
+#whitespace_INFO {
+	height: auto;
+	clear: both;
+	display: inline-block;
+	margin-top: 98vh;
+} #whitespace_LINKS {
+	height: 2000px;
+	position: relative;
+	top: -4vh;
+} .whitespace a:link {
+	text-decoration: none;
+	color: black;
+} .whitespace a:hover {
+	text-decoration: none;
+	color: black;
+} .whitespace a:visited {
+	text-decoration: none;
+	color: black;
+} .whitespace {
+	background-color: white;
+	width: 100%;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4), 0 -3px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* FIXED IMAGES */
+
+#fixedImg {
+	min-width: 100%;
+	min-height: 100vh;
+	left: 50%;
+	transform: translateX(-50%);
+	position: fixed;
+	z-index: -1;
+	bottom: 0;
+} .fixImg2 {
+	min-width: 100%;
+	min-height: 80vh;
+	margin: auto;
+	position: absolute;
+	display: inline-block;
+	bottom: -9999px;
+	top: -9999px;
+	right: -9999px;
+	left: -9999px;
+	z-index: -1;
+} #fixedImgView {
+	height: 80vh;
+	top: -1.5vh;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+/* MENUS */
+
+.link {
 	transition: all 0.4s ease;
 	-webkit-transition: all 0.4s ease;
 	-moz-transition: all 0.4s ease;
@@ -66,7 +144,7 @@ body {
 	font-size: 2vh;
 	line-height: 2vh;
 	color: black; 
-}  header:hover > a .link {
+} header:hover > a .link {
 	-webkit-transition: all 0.4s ease;
 	-moz-transition: all 0.4s ease;
 	-ms-transition: all 0.4s ease;
@@ -78,72 +156,6 @@ body {
 	opacity: 1;
 	padding: 4vh 2% 0 2%;
 	height: 6vh;
-} .ig_image {
-	margin: 0;
-	padding: 0;
-} #whitespace_INFO {
-	background-color: white;
-	width: 100%;
-	height: auto;
-	clear: both;
-	display: inline-block;
-	margin-top: 98vh;
-} #fixedImg {
-	min-width: 100%;
-	min-height: 100vh;
-	left: 50%;
-	transform: translateX(-50%);
-	position: fixed;
-	z-index: -1;
-	bottom: 0;
-} h2 {
-	position: absolute;
-	z-index: 1;
-	display: inline-block;
-	left: 50%;
-	transform: translateX(-50%);
-	font-size: 9vh;
-	font-family: 'Playfair Display SC', sans-serif;
-	margin: 0;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-} #INFO {
-	display: inline-block;
-	width: 2vh;
-	height: 12vh;
-	margin: 1.5vh 0 0 0;
-	float: left;
-} #TOP {
-	display: inline-block;
-	top: 0;
-	position: absolute;
-	width: 2vh;
-	height: 2vh;
-} .whitespace a:link {
-	text-decoration: none;
-	color: black;
-} .whitespace a:hover {
-	text-decoration: none;
-	color: black;
-} .whitespace a:visited {
-	text-decoration: none;
-	color: black;
-} .whitespace a:active {
-	text-decoration: none;
-	color: black;
-} #profile_photo {
-	height: auto;
-	display: block;
-	position: static;
-	width: 65%;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 50%;
-	border: 1px solid black;
-	clear: both;
 } #hamburger {
 	position: absolute;
 	top: 50%;
@@ -195,6 +207,26 @@ body {
 	z-index: 149;
 	position: fixed;
 	top: 0;
+}
+
+/* INFO */
+
+ #INFO {
+	display: inline-block;
+	width: 2vh;
+	height: 12vh;
+	margin: 1.5vh 0 0 0;
+	float: left;
+} #profile_photo {
+	height: auto;
+	display: block;
+	position: static;
+	width: 65%;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 50%;
+	border: 1px solid black;
+	clear: both;
 } #title {
 	font-size: 3vh;
 	display: block;
@@ -231,23 +263,18 @@ body {
 	border-radius: 1vw;
 } #about_me:active {
 	background-color: rgba(0, 0, 0, 0.2);
-} .fixImg2 {
-	width: 100%;
-	height: auto;
-	top: -1.5vh;
-	position: relative;
-	display: inline-block;
-	z-index: -1;
-	overflow: hidden;
-} #whitespace_LINKS {
-	background-color: white;
-	width: 100%;
-	height: 2000px;
-	position: relative;
-	top: -4vh;
 }
 
+/* IG */
 
+.ig_image {
+	margin: 0;
+	padding: 0;
+}
+
+/* LINKS */
+
+/* PROJECTS */
 
 /* TEMP */
 
@@ -273,6 +300,7 @@ body {
 }
 
 /* CSS QUERIES */
+
 @media only screen and (max-width: 1000px) {
 	.link {
 		display: none;
