@@ -21,6 +21,8 @@ You also need to modify the config.php file.
 
 #License
 
+© Santeri Nogelainen 
+
 This work is licensed under the Creative Commons Attribution 4.0 International License. This license covers all the files in this repository. Read more:
 http://creativecommons.org/licenses/by/4.0/
 ![CC BY License](https://i.creativecommons.org/l/by/4.0/88x31.png)
