@@ -75,7 +75,7 @@ $(document).ready(function(){
 		$("#pop-menu").css("opacity", "0");
 	});
 	
-	function fixImg(img) {
+	function fixImg(img, chng) {
 		var posI = $(img).offset().top;
 		setInterval(function () {
 			var topX = $(window).scrollTop();
@@ -91,15 +91,15 @@ $(document).ready(function(){
 		});
 		return function () {
 			var topY = $(window).scrollTop();
-			console.log("posI = " + posI);
-			console.log("topY = " + topY);
 			if (topY >= posI) {
+				$(chng).css("opacity", "1");
 			} else {
+				$(chng).css("opacity", "0");
 			}
 		}
 	}
 	
-	/*$(window).scroll(fixImg(".fixImg2"));
-	fixImg(".fixImg2");*/
+	$(window).scroll(fixImg("#INFO", ".fixedImg:nth-child(6)"));
+	fixImg("#INFO", ".fixedImg:nth-child(6)");
 	
 });

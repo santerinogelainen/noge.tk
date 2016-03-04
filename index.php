@@ -47,11 +47,13 @@
 		<h1 class="noge"><?php echo getSQL("text", "text")[2]; ?></h1>
 		</a>
 		
-		<img src="img/illuminati_s1.jpg" id="fixedImg"/>
+		<img class="fixedImg" src="img/illuminati_s1.jpg"/>
+		<img class="fixedImg" src="img/puut.jpg"/>
 		
 		<div class="whitespace" id="whitespace_INFO">
 		<a href="/"><h2><?php echo getSQL ("title", "menu")[0];?></h2></a>
 		<div id="INFO"></div>
+		
 		<div id="profile_title">
 			<img id="profile_photo" src="https://api.tumblr.com/v2/blog/santerinogelainen.tumblr.com/avatar/512"/>
 			<h3 id="title">
@@ -69,16 +71,48 @@
 			<a href="about/aboutme.php"><button id="about_me" type="button">About Me!</button></a> <!-- json -->
 		</div>
 		</div>
-		
 		<div id="fixedImgView">
-			<img class="fixImg2" src="img/jarvi2.jpg"/>
 		</div>
 		
 		<div class="whitespace" id="whitespace_LINKS">
-			<a href="#TOP"><h2><?php echo getSQL ("title", "menu")[1];?></h2></a>
+			<a href="#TOP"><h2 id="link_title"><?php echo getSQL ("title", "menu")[1];?></h2></a>
 			<div id="LINKS"></div>
 			
-			<div id="soon"><span>S</span><span>o</span><span>o</span><span>n</span><span>&trade;</span></div>
+			<div id="link_blocks">
+			<?php 
+				$cn = 0;
+			foreach (getSQL("text", "links") as $value) {
+				echo "<div class='link_block' id='" . getSQL("text", "links")[$cn] . "'>
+							<a href='" . getSQL("link", "links")[$cn] . "'>
+							<img src='svg/" . getSQL("text", "links")[$cn] . ".svg' id='" . getSQL("text", "links")[$cn] . "_img'/>
+							<p id='" . getSQL("text", "links")[$cn] . "_text'>" . getSQL("text", "links")[$cn] . "</p>
+							</a>
+						</div>";
+				$cn++;
+			}
+			?></div>
+			
+			<hr>
+			
+			<div id="username_blocks">
+			<?php 
+				$cn = 0;
+			foreach (getSQL("text", "usernames") as $value) {
+				echo "<div class='username_block' id='" . getSQL("text", "usernames")[$cn] . "'>";
+				if (getSQL("link", "usernames") !== "NULL") {
+					echo "<a href='" . getSQL("link", "usernames")[$cn] . "'>";
+				}
+				echo "<img src='svg/" . getSQL("text", "usernames")[$cn] . ".svg' id='" . getSQL("text", "usernames")[$cn] . "_img'/>";
+				echo "<p id='" . getSQL("text", "usernames")[$cn] . "_text'>" . getSQL("text", "usernames")[$cn] . "</p>";
+				echo "<p class='ausername'>" . getSQL("username", "usernames")[$cn] . "</p>";
+				if (getSQL("link", "usernames") !== "NULL") {
+					echo "</a>";
+				}
+				echo "</div>";
+				$cn++;
+			}
+			?>
+			</div>
 		</div>
 		
 		<script src="script.js"></script>
