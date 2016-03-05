@@ -33,7 +33,7 @@ header {
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4); /*PHP*/
 } h1 {
 	position: absolute;
-	top: 25vh;
+	top: 26vh;
 	left: 50%;
 	transform: translateX(-50%);
 	font-family: 'Playfair Display SC', sans-serif; /*PHP*/
@@ -48,6 +48,7 @@ header {
 	margin: 0;
 	padding: 0;
 	z-index: 101;
+	text-shadow: -1px 0 rgba(0, 0, 0, 1), 0 1px rgba(0, 0, 0, 1), 1px 0 rgba(0, 0, 0, 1), 0 -1px rgba(0, 0, 0, 1);
 } h2 {
 	position: absolute;
 	z-index: 1;
@@ -102,7 +103,7 @@ header {
 	position: fixed;
 	z-index: -1;
 	bottom: 0;
-} #fixedImgView {
+} .fixedImgView {
 	height: 70vh;
 	top: -1.5vh;
 	width: 100%;
@@ -115,18 +116,9 @@ header {
 /* MENUS */
 
 .link {
-	transition: all 0.4s ease;
-	-webkit-transition: all 0.4s ease;
-	-moz-transition: all 0.4s ease;
-	-ms-transition: all 0.4s ease;
-	transition-property:opacity, padding, height;
-	-webkit-transition-property:opacity, padding, height;
-	-moz-transition-property:opacity, padding, height;
-	-ms-transition-property:opacity, padding, height;
-	opacity: 0;
-	padding: 2vh 2% 0 2%;
+	padding: 4vh 2% 0 2%;
 	float: right;
-	height: 8vh;
+	height: 6vh;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -137,18 +129,6 @@ header {
 	font-size: 2vh;
 	line-height: 2vh;
 	color: black; 
-} header:hover > a .link {
-	-webkit-transition: all 0.4s ease;
-	-moz-transition: all 0.4s ease;
-	-ms-transition: all 0.4s ease;
-	transition: all 0.4s ease;
-	transition-property:opacity, padding, height;
-	-webkit-transition-property:opacity, padding, height;
-	-moz-transition-property:opacity, padding, height;
-	-ms-transition-property:opacity, padding, height;
-	opacity: 1;
-	padding: 4vh 2% 0 2%;
-	height: 6vh;
 } #hamburger {
 	position: absolute;
 	top: 50%;
@@ -274,19 +254,19 @@ header {
 } .link_block a p {
 	text-align: center;
 } #link_title {
-	top: -42vh;
+	top: -43vh;
 	color: white;
-	text-shadow: -1px 0 2px black, 0 1px 2px black, 1px 0 2px black, 0 -1px 2px black;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 } #LINKS {
 	position: absolute;
 	top: 0;
 	width: 2vh;
 	height: 2vh;
-} .username_block a img {
+} .username_block img {
 	width: 100%;
 } .username_block {
 	display: inline-block;
-} .username_block a p {
+} .username_block p {
 	text-align: center;
 	margin: 0;
 	padding: 0;
@@ -302,27 +282,36 @@ header {
 
 /* PROJECTS */
 
+#PROJECTS {
+	width: 2vh;
+	height: 2vh;
+} #project_title {
+	position: relative;
+	top: -43vh;
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+/* MISC */
+
+#goup {
+	position: absolute;
+	top: 87vh;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10vh;
+	height: 10vh;
+}
+
 /* TEMP */
 
- #soon span {
-	position: relative;
-} #soon span:nth-child(1) {
-	top: auto;
-} #soon {
-	width: auto;
+ #soon {
+	width: 100%;
 	height: auto;
-	display: block;
-	position: absolute;
-	margin-top: 50vh;
-	margin-left: 50%;
-	transform: translateX(-50%);
+	display: inline-block;
+	margin-bottom: 15vh;
+	text-align: center;
 	font-size: 10vh;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-moz-user-select: none;¨
-	-ms-user-select: none;
-	user-select: none;
-	cursor: default;
 }
 
 /* CSS QUERIES */

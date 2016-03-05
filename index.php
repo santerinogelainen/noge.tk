@@ -47,11 +47,14 @@
 		<h1 class="noge"><?php echo getSQL("text", "text")[2]; ?></h1>
 		</a>
 		
-		<img class="fixedImg" src="img/illuminati_s1.jpg"/>
-		<img class="fixedImg" src="img/puut.jpg"/>
+		<img class="fixedImg" src="svg/background3_BW_s.svg"/>
+		<img class="fixedImg" src="svg/background3_BW.svg"/>
+		<img class="fixedImg" src="svg/background3_BW.svg"/>
+		
+		<img id="goup" src="svg/up.svg"/>
 		
 		<div class="whitespace" id="whitespace_INFO">
-		<a href="/"><h2><?php echo getSQL ("title", "menu")[0];?></h2></a>
+		<h2><?php echo getSQL ("title", "menu")[0];?></h2>
 		<div id="INFO"></div>
 		
 		<div id="profile_title">
@@ -71,11 +74,11 @@
 			<a href="about/aboutme.php"><button id="about_me" type="button">About Me!</button></a> <!-- json -->
 		</div>
 		</div>
-		<div id="fixedImgView">
+		<div class="fixedImgView">
 		</div>
 		
 		<div class="whitespace" id="whitespace_LINKS">
-			<a href="#TOP"><h2 id="link_title"><?php echo getSQL ("title", "menu")[1];?></h2></a>
+			<h2 id="link_title"><?php echo getSQL ("title", "menu")[1];?></h2>
 			<div id="LINKS"></div>
 			
 			<div id="link_blocks">
@@ -99,13 +102,13 @@
 				$cn = 0;
 			foreach (getSQL("text", "usernames") as $value) {
 				echo "<div class='username_block' id='" . getSQL("text", "usernames")[$cn] . "'>";
-				if (getSQL("link", "usernames") !== "NULL") {
+				if (getSQL("link", "usernames")[$cn] !== "nolink") {
 					echo "<a href='" . getSQL("link", "usernames")[$cn] . "'>";
 				}
 				echo "<img src='svg/" . getSQL("text", "usernames")[$cn] . ".svg' id='" . getSQL("text", "usernames")[$cn] . "_img'/>";
 				echo "<p id='" . getSQL("text", "usernames")[$cn] . "_text'>" . getSQL("text", "usernames")[$cn] . "</p>";
 				echo "<p class='ausername'>" . getSQL("username", "usernames")[$cn] . "</p>";
-				if (getSQL("link", "usernames") !== "NULL") {
+				if (getSQL("link", "usernames")[$cn] !== "nolink") {
 					echo "</a>";
 				}
 				echo "</div>";
@@ -113,6 +116,20 @@
 			}
 			?>
 			</div>
+		</div>
+		
+		<div class="fixedImgView">
+		</div>
+		
+		<div class="whitespace" id="whitespace_PROJECTS">
+		
+			<div id="PROJECTS">
+			</div>
+			
+			<h2 id="project_title"><?php echo getSQL ("title", "menu")[2];?></h2>
+			
+			<div id="soon">SOON&trade;</div>
+			
 		</div>
 		
 		<script src="script.js"></script>
