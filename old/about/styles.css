@@ -1,0 +1,172 @@
+/* <?php header("Content-type: text/css; charset: UTF-8");?> */
+
+/* 
+FINAL BUILD: .php FILE SO I CAN GET FONTS AND HEX CODES FROM SQL OR JSON
+ECLIPE MARS DOES NOT LIKE PHP AND CSS FILES TOGETHER :(
+*/
+
+html {
+	height: auto;
+	width: 100%;
+	font-size: 100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: auto;
+	font-family: 'Raleway', sans-serif;
+} header {
+	height: 10%;
+	padding: 0;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 1); /*PHP*/
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4); /*PHP*/
+} h1 {
+	position: absolute;
+	top: -1.5vh;
+	left: 50%;
+	transform: translateX(-50%);
+	font-family: 'Playfair Display SC', sans-serif; /*PHP*/
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;¨
+	-ms-user-select: none;
+	user-select: none;
+	cursor: pointer;
+	color: black; /*PHP*/
+	font-size: 9vh;
+	margin: 0;
+	padding: 0;
+	z-index: 101;
+} .link {
+	transition: all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-ms-transition: all 0.4s ease;
+	transition-property:opacity, padding, height;
+	-webkit-transition-property:opacity, padding, height;
+	-moz-transition-property:opacity, padding, height;
+	-ms-transition-property:opacity, padding, height;
+	opacity: 0;
+	padding: 2vh 2% 0 2%;
+	float: right;
+	height: 8vh;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;¨
+	-ms-user-select: none;
+	user-select: none;
+	cursor: pointer;
+	display: table-cell;
+	font-size: 2vh;
+	line-height: 2vh;
+	color: black; 
+}  header:hover > a .link {
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-ms-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+	transition-property:opacity, padding, height;
+	-webkit-transition-property:opacity, padding, height;
+	-moz-transition-property:opacity, padding, height;
+	-ms-transition-property:opacity, padding, height;
+	opacity: 1;
+	padding: 4vh 2% 0 2%;
+	height: 6vh;
+} .ig_image {
+	margin: 0;
+	padding: 0;
+} #hamburger {
+	display: none;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 2.5vh;
+	z-index: 148;
+	cursor: pointer;
+} #pop-menu {
+	width: 98%;
+	height: auto;
+	background-color: white;
+	border: 1px solid black;
+	z-index: 150;
+	position: fixed;
+	top: 1%;
+	right: 1%;
+	opacity: 0;
+	display: none;
+} .pop-link {
+	display: block;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;¨
+	-ms-user-select: none;
+	user-select: none;
+	cursor: pointer;
+	color: black;
+	font-size: 4vh;
+	line-height: 4vh;
+	text-align: center;
+	padding: 2vh 0 2vh 0;
+} #pop-menu a:link {
+	text-decoration: none;
+	color: black;
+} #pop-menu a:visited {
+	text-decoration: none;
+	color: black;
+} #pop-menu a:hover {
+	text-decoration: none;
+	color: black;
+} #pop-menu a:active {
+	text-decoration: none;
+	color: black;
+} #pop-back {
+	background-color: rgba(0, 0, 0, 0.7);
+	opacity: 0;
+	display: none;
+	width: 200%;
+	height: 200%;
+	z-index: 149;
+	position: fixed;
+	top: 0;
+} #soon {
+	width: auto;
+	height: auto;
+	display: block;
+	position: absolute;
+	margin-top: 50vh;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	font-size: 10vh;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;¨
+	-ms-user-select: none;
+	user-select: none;
+	cursor: default;
+} #soon span {
+	position: relative;
+} #soon span:nth-child(1) {
+	top: auto;
+}
+
+
+
+/* CSS QUERIES */
+@media only screen and (max-width: 1000px) {
+	.link {
+		display: none;
+	}
+	#hamburger {
+		display: inline-block;
+	}
+}
+@media only screen and (min-width: 1000px) {
+	#pop-menu {
+		display: none;
+	}
+}

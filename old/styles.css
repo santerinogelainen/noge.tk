@@ -1,0 +1,376 @@
+/* <?php header("Content-type: text/css; charset: UTF-8");?> */
+
+/* 
+FINAL BUILD: .php FILE SO I CAN GET FONTS AND HEX CODES FROM SQL OR JSON
+ECLIPE MARS DOES NOT LIKE PHP AND CSS FILES TOGETHER :(
+*/
+
+/* HTML AND BODY */
+
+html {
+	height: auto;
+	width: 100%;
+	font-size: 100%;
+} body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: auto;
+	background-color: black;
+	font-family: 'Raleway', sans-serif;
+}
+
+/* HEADERS */
+
+header {
+	height: 10%;
+	padding: 0;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 1); /*PHP*/
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4); /*PHP*/
+} h1 {
+	position: absolute;
+	top: 26vh;
+	left: 50%;
+	transform: translateX(-50%);
+	font-family: 'Playfair Display SC', sans-serif; /*PHP*/
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: pointer;
+	color: white; /*PHP*/
+	font-size: 9vh;
+	margin: 0;
+	padding: 0;
+	z-index: 101;
+	text-shadow: -1px 0 rgba(0, 0, 0, 1), 0 1px rgba(0, 0, 0, 1), 1px 0 rgba(0, 0, 0, 1), 0 -1px rgba(0, 0, 0, 1);
+} h2 {
+	position: absolute;
+	z-index: 1;
+	display: inline-block;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 9vh;
+	font-family: 'Playfair Display SC', sans-serif;
+	margin: 0;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* WHITESPACE */
+
+#whitespace_INFO {
+	min-height: 102vh;
+	clear: both;
+	display: inline-block;
+	margin-top: 98vh;
+} #whitespace_LINKS {
+	min-height: 85vh;
+	position: relative;
+	display: block;
+	padding-top: 15vh;
+} .whitespace a:link {
+	text-decoration: none;
+	color: black;
+} .whitespace a:hover {
+	text-decoration: none;
+	color: black;
+} .whitespace a:visited {
+	text-decoration: none;
+	color: black;
+} .whitespace {
+	background-color: white;
+	width: 100%;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+/* FIXED IMAGE */
+
+.fixedImg {
+	min-width: 100%;
+	min-height: 100vh;
+	left: 50%;
+	transform: translateX(-50%);
+	position: fixed;
+	z-index: -1;
+	bottom: 0;
+} .fixedImgView {
+	height: 70vh;
+	top: -1.5vh;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+} .fixedImg:nth-child(n + 6) {
+	opacity: 0;
+}
+
+/* MENUS */
+
+.link {
+	padding: 4vh 2% 0 2%;
+	float: right;
+	height: 6vh;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: pointer;
+	display: table-cell;
+	font-size: 2vh;
+	line-height: 2vh;
+	color: black; 
+} #hamburger {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 2.5vh;
+	cursor: pointer;
+} #pop-menu {
+	width: 98%;
+	height: auto;
+	background-color: white;
+	border: 1px solid black;
+	z-index: 150;
+	position: fixed;
+	top: 1%;
+	right: 1%;
+	opacity: 0;
+	display: none;
+} .pop-link {
+	display: block;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: pointer;
+	color: black;
+	font-size: 4vh;
+	line-height: 4vh;
+	text-align: center;
+	padding: 2vh 0 2vh 0;
+} #pop-menu a:link {
+	text-decoration: none;
+	color: black;
+} #pop-menu a:visited {
+	text-decoration: none;
+	color: black;
+} #pop-menu a:hover {
+	text-decoration: none;
+	color: black;
+} #pop-menu a:active {
+	text-decoration: none;
+	color: black;
+} #pop-back {
+	background-color: rgba(0, 0, 0, 0.7);
+	opacity: 0;
+	display: none;
+	width: 200%;
+	height: 200%;
+	z-index: 149;
+	position: fixed;
+	top: 0;
+}
+
+/* INFO */
+
+ #INFO {
+	display: inline-block;
+	width: 2vh;
+	height: 12vh;
+	margin: 1.5vh 0 0 0;
+	float: left;
+} #profile_photo {
+	height: auto;
+	display: block;
+	position: static;
+	width: 65%;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 50%;
+	border: 1px solid black;
+	clear: both;
+} #title {
+	font-size: 3vh;
+	display: block;
+	position: static;
+	clear: both;
+	text-align: center;
+	margin-top: 1vh;
+} #desc {
+	height: auto;
+	display: block;
+	position: static;
+	text-align: center;
+} #profile_title {
+	width: 50%;
+	height: auto;
+	position: relative;
+	display: block;
+	clear: both;
+} #about_me {
+	display: block;
+	position: static;
+	color: black;
+	border: 2px solid black;
+	background-color: rgba(0,0,0,0);
+	border-radius: 1vw;
+	cursor: pointer;
+} #about_me:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+	border-radius: 1vw;
+} #about_me:visited {
+	color: black;
+	border: 2px solid black;
+	background-color: rgba(0,0,0,0);
+	border-radius: 1vw;
+} #about_me:active {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* IG */
+
+.ig_image {
+	margin: 0;
+	padding: 0;
+}
+
+/* LINKS */
+
+ .link_block a img {
+	width: 100%;
+} .link_block {
+	display: inline-block;
+} .link_block a p {
+	text-align: center;
+} #link_title {
+	top: -43vh;
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+} #LINKS {
+	position: absolute;
+	top: 0;
+	width: 2vh;
+	height: 2vh;
+} .username_block img {
+	width: 100%;
+} .username_block {
+	display: inline-block;
+} .username_block p {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+} #username_blocks {
+	margin-top: 6vh;
+	text-align: center;
+} #link_blocks {
+	text-align: center;
+} .username {
+	font-size: 2vh;
+	line-height: 2vh;
+}
+
+/* PROJECTS */
+
+#PROJECTS {
+	width: 2vh;
+	height: 2vh;
+} #project_title {
+	position: relative;
+	top: -43vh;
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+/* MISC */
+
+#goup {
+	position: absolute;
+	top: 87vh;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10vh;
+	height: 10vh;
+}
+
+/* TEMP */
+
+ #soon {
+	width: 100%;
+	height: auto;
+	display: inline-block;
+	margin-bottom: 15vh;
+	text-align: center;
+	font-size: 10vh;
+}
+
+/* CSS QUERIES */
+
+@media only screen and (max-width: 1000px) {
+	.link {
+		display: none;
+	}
+	#hamburger {
+		display: inline-block;
+	} #profile_title {
+		width: 100%
+	} #desc_me {
+		width: 90%;
+		padding-left: 5%;
+		padding-right: 5%;
+	} #desc {
+		font-size: 3vh;
+	} #about_me {
+		font-size: 3vh;
+		margin: 4vh auto 4vh auto;
+		height: 10vw;
+		width: 80vw;
+	}  .link_block {
+		width: 20%;
+		margin: 0 2.5% 2vh 2.5%;
+		font-size: 2vh;
+	} .username_block {
+		width: 20%;
+		margin: 0 2.5% 2vh 2.5%;
+		font-size: 2vh;
+	}
+}
+@media only screen and (min-width: 1000px) {
+	#pop-menu {
+		display: none;
+	} #profile_title {
+		float: right;
+	} #desc_me {
+		float: left;
+		margin-top: 0;
+		padding: 5vw 5% 5vw 10%;
+		width: 34%;
+	} #desc {
+		font-size: 1.75vw;
+	} #about_me {
+		font-size: 1.75vw;
+		margin: 5vh auto 5vh auto;
+		height: 5vw;
+		width: 20vw;
+	} #hamburger {
+		display: none;
+	} .link_block {
+		width: 10%;
+		margin: 0 5% 8vh 5%;
+		font-size: 3vh;
+	} .username_block {
+		width: 10%;
+		margin: 0 5% 8vh 5%;
+		font-size: 3vh;
+	}
+}
