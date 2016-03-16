@@ -87,7 +87,7 @@
 			foreach (getSQL("text", "links") as $value) {
 				echo "<div class='link_block' id='" . getSQL("text", "links")[$cn] . "'>
 							<a href='" . getSQL("link", "links")[$cn] . "'>
-							<img src='svg/" . getSQL("text", "links")[$cn] . ".svg' id='" . getSQL("text", "links")[$cn] . "_img'/>
+							<img src='/old/svg/" . getSQL("text", "links")[$cn] . ".svg' id='" . getSQL("text", "links")[$cn] . "_img'/>
 							<p id='" . getSQL("text", "links")[$cn] . "_text'>" . getSQL("text", "links")[$cn] . "</p>
 							</a>
 						</div>";
@@ -105,7 +105,7 @@
 				if (getSQL("link", "usernames")[$cn] !== "nolink") {
 					echo "<a href='" . getSQL("link", "usernames")[$cn] . "'>";
 				}
-				echo "<img src='svg/" . getSQL("text", "usernames")[$cn] . ".svg' id='" . getSQL("text", "usernames")[$cn] . "_img'/>";
+				echo "<img src='/old/svg/" . getSQL("text", "usernames")[$cn] . ".svg' id='" . getSQL("text", "usernames")[$cn] . "_img'/>";
 				echo "<p id='" . getSQL("text", "usernames")[$cn] . "_text'>" . getSQL("text", "usernames")[$cn] . "</p>";
 				echo "<p class='ausername'>" . getSQL("username", "usernames")[$cn] . "</p>";
 				if (getSQL("link", "usernames")[$cn] !== "nolink") {
