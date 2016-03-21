@@ -29,8 +29,6 @@ $(document).ready(function(){
 		$('body').attr('draggable', false);
 		
 			
-			var x = event.pageX;
-			var mDown = false;
 			var offLeft = $("#menu").offset().left;
 			
 			$("body").on('swiperight', function() {
@@ -64,9 +62,9 @@ $(document).ready(function(){
 			} 
 			
 		$(".menu_item").mouseover(function () {
-			$(this).css("background-color", "rgba(0, 0, 0, 0.15)");
+			$(this).css("background-color", "rgba(255, 255, 255, 0.15)");
 		});
 		$(".menu_item").mouseleave(function () {
-			$(this).css("background-color", "rgba(0, 0, 0, 0)");
+			$(this).css("background-color", "rgba(255, 255, 255, 0)");
 		});
 });

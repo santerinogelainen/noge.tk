@@ -64,8 +64,8 @@ body {
  	cursor: pointer;
 } #menu {
 	width: 300px;
-	height: 100%;
-	background-color: white;
+	height: 92vh;
+	background-color: black;
 	position: absolute;
 	top: 0;
 	left: -300px;
@@ -88,7 +88,7 @@ body {
 	text-align: center;
 	text-decoration: none;
 	cursor: pointer;
-	color: black;
+	color: white;
 	font-size: 6vh;
 	padding: 1vh 0 1vh 0;
 	font-family: 'Open Sans Condensed', Arial;
