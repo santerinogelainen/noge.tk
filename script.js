@@ -30,29 +30,43 @@ $(document).ready(function(){
 		
 			
 			var offLeft = $("#menu").offset().left;
+			var swipeState = true;
 			
-			$("body").on('swiperight', function() {
-				$("body").animate({
-					left: "300px"
-				}, 350);
-				$("#expand").css("width", "100%");
-				$("#expand").css("height", "100%");
-				$("#expand").animate({
-					opacity: "1"
-				}, 350);
+				$("body").on('swiperight', function() {
+					if (swipeState) {
+						$("body").animate({
+							left: "300px"
+						}, 350);
+						$("#expand").css("width", "100%");
+						$("#expand").css("height", "100%");
+						$("#expand").animate({
+							opacity: "1"
+						}, 350);
+						setTimeout(function() {
+							return swipeState = false;
+						}, 355);
+					}
+				});
+				
+				$("body").on('swipeleft', function() {
+					if (!swipeState) {
+						$("body").animate({
+							left: "0"
+						}, 350);
+						$("#expand").animate({
+							opacity: "0"
+						}, 350);
+						setTimeout(function () {
+							$("#expand").css("width", "0");
+							$("#expand").css("height", "0");
+						}, 350);
+						setTimeout(function() {
+							return swipeState = true;
+						}, 355);
+					}
+				
 			});
-			$("body").on('swipeleft', function() {
-				$("body").animate({
-					left: "0"
-				}, 350);
-				$("#expand").animate({
-					opacity: "0"
-				}, 350);
-				setTimeout(function () {
-					$("#expand").css("width", "0");
-					$("#expand").css("height", "0");
-				}, 350);
-			});
+			
 			
 			if (offLeft < -300) {
 				$("body").css("left", "0");

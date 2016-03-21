@@ -3,7 +3,6 @@
 	<head>
 	
 	<!-- links -->
-	<link rel="stylesheet" type="text/css" href='rng.css'/>
 	<link rel="stylesheet" type="text/css" href='styles.css'/>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 	<!-- links end -->
