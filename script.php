@@ -15,12 +15,19 @@
 	/* GET DATA FROM TABLES */
 	
 	
-	function getSQL($x,$y) {
+	function getSQL($x,$y,$z = null, $toString = false) {
 		$sql = "SELECT " . $x . " FROM " . $y;
+		if (!empty($z)) {
+			$sql = $sql . " WHERE " . $z;
+		}
 		global $conn;
 		$result = mysqli_query($conn, $sql);
 		while ($row = mysqli_fetch_array($result)) {
 			$array[] = $row[$x];
+		}
+		
+		if ($toString) {
+			$array = implode(" ", $array);
 		}
 		return $array;
 	}

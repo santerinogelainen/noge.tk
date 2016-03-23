@@ -1,7 +1,12 @@
 
 $(document).ready(function(){
+	
+		var offLeft = $("#menu").offset().left;
+		var swipeState = true;
+	
 		$("#hamburger").click(function () {
-			$("body").animate({
+			if (swipeState) {
+				$("body").animate({
 				left: "300px"
 			}, 350);
 			$("#expand").css("width", "100%");
@@ -9,9 +14,15 @@ $(document).ready(function(){
 			$("#expand").animate({
 				opacity: "1"
 			}, 350);
+			setTimeout(function() {
+				return swipeState = false;
+			}, 355);
+			}
 		});
+		
 		$("#expand").click(function () {
-			$("body").animate({
+			if (!swipeState) {
+				$("body").animate({
 				left: "0"
 			}, 350);
 			$("#expand").animate({
@@ -21,6 +32,10 @@ $(document).ready(function(){
 				$("#expand").css("width", "0");
 				$("#expand").css("height", "0");
 			}, 350);
+			setTimeout(function() {
+				return swipeState = true;
+			}, 355);
+			}
 		});
 		
 		$.mobile.loading().hide();
@@ -28,9 +43,6 @@ $(document).ready(function(){
 		$('#logo').attr('draggable', false);
 		$('body').attr('draggable', false);
 		
-			
-			var offLeft = $("#menu").offset().left;
-			var swipeState = true;
 			
 				$("body").on('swiperight', function() {
 					if (swipeState) {

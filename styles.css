@@ -110,7 +110,7 @@ body {
 } .err {
 	width: auto;
 	height: 50%;
-	margin-top: 12vh;
+	margin-top: -25vh;
 	text-align: center;
 	font-family: 'Open Sans Condensed', Arial;
 	color: black;
