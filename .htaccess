@@ -1,3 +1,7 @@
 ErrorDocument 404 /404.php
 ErrorDocument 500 /500.php
 ErrorDocument 400 /400.php
+Redirect /config.php /404.php
+Redirect /script.php /404.php
+Redirect /links/script.php /404.php
+Redirect /information/script.php /404.php

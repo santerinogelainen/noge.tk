@@ -102,9 +102,13 @@
 							$c = 0;
 							foreach (getSQL("id", "about_me", "id>0") as &$value) {
 								echo "<tr class='me_row'>
-								<td class='me_question'>" . getSQL("question", "about_me", "id>0")[$c] . "</td>
-								<td class='me_answer'>" . getSQL("answer", "about_me", "id>0")[$c] . "</td>
-								</tr>";
+								<td class='me_question'>" . getSQL("question", "about_me", "id>0")[$c] . "</td>";
+								if (is_null(getSQL("link", "about_me", "id>0")[$c])) {
+									echo "<td class='me_answer'>" . getSQL("answer", "about_me", "id>0")[$c] . "</td>";
+								} if (!is_null(getSQL("link", "about_me", "id>0")[$c])) {
+									echo "<td class='me_answer'><a href='" . getSQL("link", "about_me", "id>0")[$c] . "'>" . getSQL("answer", "about_me", "id>0")[$c] . "</a></td>";
+								}
+								echo "</tr>";
 								$c++;
 							}
 						?>

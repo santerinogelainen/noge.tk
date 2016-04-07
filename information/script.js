@@ -129,7 +129,7 @@ $(document).ready(function(){
 		$("#me").click(function() {
 			if (!mState) {
 				$("#me_c").animate({
-					height: mHeight + "px",
+					height: (mHeight + 30) + "px",
 					fontSize: "1em"
 				}, 350);
 				$("#me_table").animate({
@@ -163,7 +163,7 @@ $(document).ready(function(){
 		$("#website").click(function() {
 			if (!wState) {
 				$("#website_c").animate({
-					height: wHeight + "px",
+					height: (wHeight + 30) + "px",
 					fontSize: "1em"
 				}, 350);
 				$("#website_table").animate({

@@ -12,12 +12,14 @@
 					"password" => "password",
 					"database" => "database"
 			),
-			"maintanence" => array(
-					"on" => true,
-					"message" => array (
-							1 => "Coming soon...",
-							2 => "This website is under maintanence :("
-					)
+			"TUMBLR" => array(
+					"consumerkey" => "tumblr consumer key here..."
+			),
+			"TWITTER" => array(
+					"consumerkey" => "twitter consumer key here...",
+					"consumersecret" => "twitter consumer secret here...",
+					"token" => "twitter token here...",
+					"tokensecret" => "twitter token secret here..."
 			)
 	);
 ?>

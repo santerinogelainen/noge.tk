@@ -3,8 +3,8 @@
 	<head>
 	
 	<!-- links -->
-	<link rel="stylesheet" type="text/css" href='styles.css'/>
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href='/styles.css'/>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 	<!-- links end -->
 	
 	
@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no" />
 	
 	<?php
-	include 'script.php';
+	include '/script.php';
 	?>
 	</head>
 	<body>
