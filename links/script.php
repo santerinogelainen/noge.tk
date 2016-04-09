@@ -33,19 +33,19 @@
 		return $array;
 	}
 	
-	/*TWITTER OAUTH IS DUMB*/
+	/*TWITTER OAUTH NEED AUTHENTICATION*/
 	
 	$connection = new TwitterOAuth($config["TWITTER"]["consumerkey"], $config["TWITTER"]["consumersecret"], $config["TWITTER"]["token"], $config["TWITTER"]["tokensecret"]);
 	
 	/*BASIC PARSER FROM JSON TO A PHP ASSOC ARRAY. ARGUMENTS ARE A LINK AND AN ACCESS TOKEN / CONSUMER KEY*/
 	
-	function jsonToArray($url, $access_token = "") {
+	function jsonToArray($url, $access_token = "", $toAssoc = true) {
 		if ($access_token === "") {
 			$content = file_get_contents($url);
 		} else {
 			$content = file_get_contents($url . $access_token);
 		}
-		return $json = json_decode($content, true);
+		return $json = json_decode($content, $toAssoc);
 	}
 	
 	/* GET LATEST IG PICTURES $n = HOW MANY */
