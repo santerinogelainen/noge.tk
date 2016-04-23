@@ -1,21 +1,21 @@
 <?php
-	
+
 	require "twitteroauth/autoload.php";
 	include '../config.php';
 	use Abraham\TwitterOAuth\TwitterOAuth;
-	
+
 	/* CONNECT TO DATABASE */
-	
-	
+
+
 	$conn = mysqli_connect($config["MYSQL"]["ip"], $config["MYSQL"]["username"], $config["MYSQL"]["password"], $config["MYSQL"]["database"]);
 	if (!$conn) {
 		die("Connection failed: " . mysqli_connect_error() . mysqli_connect_errno());
 	}
-	
-	
+
+
 	/* GET DATA FROM TABLES */
-	
-	
+
+
 	function getSQL($x,$y,$z = null, $toString = false) {
 		$sql = "SELECT " . $x . " FROM " . $y;
 		if (!empty($z)) {
@@ -26,19 +26,19 @@
 		while ($row = mysqli_fetch_array($result)) {
 			$array[] = $row[$x];
 		}
-		
+
 		if ($toString) {
 			$array = implode(" ", $array);
 		}
 		return $array;
 	}
-	
+
 	/*TWITTER OAUTH NEED AUTHENTICATION*/
-	
+
 	$connection = new TwitterOAuth($config["TWITTER"]["consumerkey"], $config["TWITTER"]["consumersecret"], $config["TWITTER"]["token"], $config["TWITTER"]["tokensecret"]);
-	
+
 	/*BASIC PARSER FROM JSON TO A PHP ASSOC ARRAY. ARGUMENTS ARE A LINK AND AN ACCESS TOKEN / CONSUMER KEY*/
-	
+
 	function jsonToArray($url, $access_token = "", $toAssoc = true) {
 		if ($access_token === "") {
 			$content = file_get_contents($url);
@@ -47,9 +47,9 @@
 		}
 		return $json = json_decode($content, $toAssoc);
 	}
-	
+
 	/* GET LATEST IG PICTURES $n = HOW MANY */
-	
+
 	function getIGPictures($n) {
 		global $keys;
 		global $config;

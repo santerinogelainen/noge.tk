@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=latin,latin-ext);
-@import url(https://fonts.googleapis.com/css?family=Roboto:100,400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,700);
 
 @-webkit-keyframes bg_gradient {
     0%{background-position:100% 0%}
@@ -13,7 +13,7 @@
     0%{background-position:100% 0%}
     100%{background-position:0% 100%}
 }
-@keyframes bg_gradient { 
+@keyframes bg_gradient {
     0%{background-position:100% 0%}
     100%{background-position:0% 100%}
 }
@@ -136,6 +136,7 @@ html {
 	border: 1px solid black;
 	margin: 25px;
 	text-align: left;
+  z-index: 20;
 } .widget_header {
 	height: 75px;
 } #instagram .widget_header {
@@ -281,6 +282,15 @@ html {
 } .small_block {
 	height: 185px;
 	float: right;
+} .widget_header div:nth-child(1) {
+  font-family: 'Roboto', sans-serif;
+  width: 300px;
+  font-weight: 300;
+  font-size: 2em;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  z-index: -1;
 }
 
 ::-webkit-scrollbar {
@@ -303,7 +313,10 @@ html {
 @media only screen and (max-width: 704px) {
 	#content {
 		width: 352px;
-	}
+	} .widget_header div:nth-child(1) {
+    top: -40px;
+    text-align: center;
+  }
 }
 /* WIDTH 704-1056px */
 @media only screen and (min-width: 704px) and (max-width: 1056px) {
@@ -323,4 +336,3 @@ html {
 		width: 1408px;
 	}
 }
-

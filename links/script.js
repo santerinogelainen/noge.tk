@@ -1,13 +1,13 @@
 
 $(document).ready(function(){
-		
+
 		$.mobile.loading().hide();
-		
+
 		var offLeft = $("#menu").offset().left;
 		var swipeState = true;
-		
+
 		$('#hamburger').attr('draggable', false);
-		
+
 		$("#hamburger").click(function () {
 			if (swipeState) {
 				$("body").animate({
@@ -26,7 +26,7 @@ $(document).ready(function(){
 			}, 355);
 			}
 		});
-		
+
 		$("#expand").click(function () {
 			if (!swipeState) {
 				$("body").animate({
@@ -47,7 +47,7 @@ $(document).ready(function(){
 			}, 355);
 			}
 		});
-		
+
 		$("body").on('swiperight', function() {
 			if (swipeState) {
 				$("body").animate({
@@ -66,7 +66,7 @@ $(document).ready(function(){
 				}, 355);
 			}
 		});
-		
+
 		$("body").on('swipeleft', function() {
 			if (!swipeState) {
 				$("body").animate({
@@ -86,21 +86,32 @@ $(document).ready(function(){
 					return swipeState = true;
 				}, 355);
 			}
-		
+
 	});
-	
-	
+
+
 	if (offLeft < -300) {
 		$("body").css("left", "0");
 	}
 	if (offLeft >= 0) {
 		$("body").css("left", "300px");
-	} 
-	
+	}
+
 		$(".menu_item").mouseover(function () {
 			$(this).css("background-color", "rgba(255, 255, 255, 0.15)");
 		});
 		$(".menu_item").mouseleave(function () {
 			$(this).css("background-color", "rgba(255, 255, 255, 0)");
+		});
+
+		$(".block").mouseover(function(){
+			$(".widget_name", this).animate({
+				top: "-40px"
+			}, 250);
+		});
+		$(".block").mouseleave(function(){
+			$(".widget_name", this).animate({
+				top: "0"
+			}, 250);
 		});
 });
