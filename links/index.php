@@ -8,9 +8,6 @@
 	<!-- links end -->
 
 	<script src="../jquery/jquery-1.12.0.min.js"></script>
-	<script src="../jquery/jquery-ui.min.js"></script>
-	<script src="../jquery/jquery.color-2.1.2.min.js"></script>
-	<script src="../jquery/jquery.mobile-1.4.5.min.js"></script>
 
 	<!-- metas -->
 
@@ -28,13 +25,18 @@
 
 			<a href="http://noge.tk"><img id="side_logo" src="../img/logo_white.png"></a>
 
-			<?php
-			$cn = 0;
-			foreach (getSQL("title", "menu") as &$value) {
-				echo "<a href='http://noge.tk/" . strtolower(getSQL("title", "menu")[$cn]) . "/'><div id='" . strtolower(getSQL("title", "menu")[$cn])[$cn] . "' class='menu_item'>" . strtolower(getSQL("title", "menu")[$cn]) . "</div></a>";
-				$cn++;
-			}
-			?>
+			<a href="http://noge.tk/information/"><div id="information" class="menu_item"><?php
+				echo strtolower(getSQL("title", "menu")[0]);
+			?></div></a>
+			<a href="http://noge.tk/links/"><div id="links" class="menu_item"><?php
+				echo strtolower(getSQL("title", "menu")[1]);
+			?></div></a>
+			<a href="https://github.com/santerinogelainen"><div id="github" class="menu_item"><?php
+				echo strtolower(getSQL("title", "menu")[2]);
+			?></div></a>
+			<a href="http://noge.tk/photos"><div id="photos" class="menu_item"><?php
+				echo strtolower(getSQL("title", "menu")[3]);
+			?></div></a>
 		</div>
 
 		<h1>
@@ -61,5 +63,6 @@
 		</div>
 
 		<script src="script.js"></script>
+		<script src="../menu.js"></script>
 	</body>
 </html>

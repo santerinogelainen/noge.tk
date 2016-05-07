@@ -12,7 +12,7 @@
     0%{background-position:100% 0%}
     100%{background-position:0% 100%}
 }
-@keyframes bg_gradient { 
+@keyframes bg_gradient {
     0%{background-position:100% 0%}
     100%{background-position:0% 100%}
 }
@@ -37,15 +37,22 @@ body {
 	display:flex;
 	justify-content:center;
 	align-items:center;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+ 	user-select: none;
 } #logo {
 	height: 50vh;
-	margin-top: 45%;
 	width: auto;
-	-webkit-touch-callout: none;
-  	-webkit-user-select: none;
- 	-khtml-user-select: none;
- 	-moz-user-select: none;
-  	-ms-user-select: none;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
  	user-select: none;
 } #hamburger {
 	height: 5%;
@@ -66,9 +73,9 @@ body {
 	width: 300px;
 	height: 92vh;
 	background-color: black;
-	position: absolute;
+	position: fixed;
 	top: 0;
-	left: -300px;
+  left: -300px;
 	padding-top: 8vh;
 	z-index: 50;
 } #expand {
@@ -128,5 +135,12 @@ body {
 	border-radius: 1vh;
 } #back_front:hover {
 	background-color: rgba(255, 255, 255, 0.45);
+} img {
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+ 	user-select: none;
 }
-

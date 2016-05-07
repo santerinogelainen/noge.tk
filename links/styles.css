@@ -45,11 +45,12 @@ html {
 	transform: translateX(-50%);
 	font-family: 'Roboto', sans-serif;
 	font-weight: 100;
-	-webkit-touch-callout: none;
-  	-webkit-user-select: none;
- 	-khtml-user-select: none;
- 	-moz-user-select: none;
-  	-ms-user-select: none;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
  	user-select: none;
  	cursor: default;
 } *:focus {
@@ -134,7 +135,7 @@ html {
 	height: 288px;
 	background-color: white;
 	border: 1px solid black;
-	margin: 25px;
+	margin: 40px;
 	text-align: left;
   z-index: 20;
 } .widget_header {
@@ -291,6 +292,14 @@ html {
   position: absolute;
   top: 0;
   z-index: -1;
+} img {
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+ 	user-select: none;
 }
 
 ::-webkit-scrollbar {
@@ -310,29 +319,29 @@ html {
 }
 
 /* WIDTH LESS THAN 704px */
-@media only screen and (max-width: 704px) {
+@media only screen and (max-width: 764px) {
 	#content {
-		width: 352px;
+		width: 382px;
 	} .widget_header div:nth-child(1) {
     top: -40px;
     text-align: center;
   }
 }
 /* WIDTH 704-1056px */
-@media only screen and (min-width: 704px) and (max-width: 1056px) {
+@media only screen and (min-width: 764px) and (max-width: 1146px) {
 	#content {
-		width: 704px;
+		width: 764px;
 	}
 }
 /* WIDTH 1056-1408px */
-@media only screen and (min-width: 1056px) and (max-width: 1408px) {
+@media only screen and (min-width: 1146px) and (max-width: 1528px) {
 	#content {
-		width: 1056px;
+		width: 1146px;
 	}
 }
 /* WIDTH MORE THAN 1408px */
-@media only screen and (min-width: 1408px) {
+@media only screen and (min-width: 1528px) {
 	#content {
-		width: 1408px;
+		width: 1528px;
 	}
 }

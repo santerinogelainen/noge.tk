@@ -2,20 +2,20 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,700);
 
 @-webkit-keyframes bg_gradient {
-    0%{background-position:100% 0%}
-    100%{background-position:0% 100%}
+    0%{background-position:100% 0}
+    100%{background-position:0 100%}
 }
 @-moz-keyframes bg_gradient {
-    0%{background-position:100% 0%}
-    100%{background-position:0% 100%}
+    0%{background-position:100% 0}
+    100%{background-position:0 100%}
 }
 @-o-keyframes bg_gradient {
-    0%{background-position:100% 0%}
-    100%{background-position:0% 100%}
+    0%{background-position:100% 0}
+    100%{background-position:0 100%}
 }
-@keyframes bg_gradient { 
-    0%{background-position:100% 0%}
-    100%{background-position:0% 100%}
+@keyframes bg_gradient {
+    0%{background-position:100% 0}
+    100%{background-position:0 100%}
 }
 html {
 	width: 100%;
@@ -57,11 +57,12 @@ html {
 	left: 50%;
 	transform: translateX(-50%);
 	font-family: "Roboto", sans-serif;
-	-webkit-touch-callout: none;
-  	-webkit-user-select: none;
- 	-khtml-user-select: none;
- 	-moz-user-select: none;
-  	-ms-user-select: none;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
  	user-select: none;
  	cursor: default;
 } #hamburger {
@@ -234,7 +235,33 @@ html {
 		width: 80%;
 		margin-top: 15px;
 		margin-left: 10%;
-	}
+	} img {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+   	user-select: none;
+  }
+
+
+  ::-webkit-scrollbar {
+  	width: 12px;
+  	margin: 1px;
+  	background-color: rgba( 0, 0, 0, 0);
+  } ::-webkit-scrollbar-track {
+  	background-color: rgba( 0, 0, 0, 0);
+  } ::-webkit-scrollbar-track-piece {
+  	background-color: rgba( 0, 0, 0, 0);
+  } ::-webkit-scrollbar-thumb {
+  	background-color: rgba(0, 0, 0, 0.2);
+  } ::-webkit-scrollbar:horizontal {
+  	height: 12px;
+  	margin: 1px;
+  	background-color: rgba( 0, 0, 0, 0);
+  }
+
 }
 /* WIDTH MORE THAN 1000px */
 @media only screen and (min-width: 1000px) {
@@ -266,4 +293,3 @@ html {
 		display: inline-block;
 	}
 }
-
