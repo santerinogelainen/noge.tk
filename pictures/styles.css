@@ -137,6 +137,9 @@ html {
 	background-color: black;
 	margin: 40px;
   z-index: 20;
+  overflow: hidden;
+  transition: box-shadow 0.75s;
+  -webkit-transition: box-shadow 0.75s;
 } h2 {
 	text-align: center;
 	margin-top: 70px;
@@ -190,17 +193,30 @@ html {
 } .middle_logo {
   width: 65px;
   height: 65px;
+} .middle_style1 {
   filter: drop-shadow(0 0 8px #000);
   -webkit-filter: drop-shadow(0 0 8px #000);
 } .middle {
   position: absolute;
-  top: 5px;
-  left: 5px;
+  border: 5px solid black;
+  top: 0;
+  left: 0;
   width: 295px;
   height: 295px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+} .img_style2 {
+  position: absolute;
+  min-width: 300px;
+  min-height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+} .block:hover {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
 }
 
 ::-webkit-scrollbar {
