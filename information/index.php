@@ -24,10 +24,6 @@
 		<div id="menu">
 
 			<a href="http://noge.tk"><img id="side_logo" src="../img/logo_white.png"></a>
-
-			<a href="http://noge.tk/information/"><div id="information" class="menu_item"><?php
-				echo strtolower(getSQL("title", "menu")[0]);
-			?></div></a>
 			<a href="http://noge.tk/links/"><div id="links" class="menu_item"><?php
 				echo strtolower(getSQL("title", "menu")[1]);
 			?></div></a>

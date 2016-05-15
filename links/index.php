@@ -28,9 +28,6 @@
 			<a href="http://noge.tk/information/"><div id="information" class="menu_item"><?php
 				echo strtolower(getSQL("title", "menu")[0]);
 			?></div></a>
-			<a href="http://noge.tk/links/"><div id="links" class="menu_item"><?php
-				echo strtolower(getSQL("title", "menu")[1]);
-			?></div></a>
 			<a href="https://github.com/santerinogelainen"><div id="github" class="menu_item"><?php
 				echo strtolower(getSQL("title", "menu")[2]);
 			?></div></a>
