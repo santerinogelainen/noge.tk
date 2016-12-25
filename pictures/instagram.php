@@ -1,9 +1,24 @@
-<a href="https://www.instagram.com/santerinogelainen/"><div class='block' id='instagram'>
-  <?php
-    getIGPictures(4);
-  ?>
+<!-- INSTAGRAM -->
+<?php
+$igUser = jsonToArray("https://api.instagram.com/v1/users/self/?access_token=", $config["IG"]["IGtoken"]);
 
-  <div class='middle'>
-    <img class='middle_logo middle_style1' src='../img/instagram.png' />
-  </div>
-</div></a>
+if ($igUser !== false):
+?>
+
+
+<div class="block" id="instagram">
+  <div class="widget_header">
+    <div class="widget_name"><a target='_blank' href="https://www.instagram.com/santerinogelainen/">INSTAGRAM</a></div>
+    <?php
+      echo "<a target='_blank' href='https://www.instagram.com/santerinogelainen/'><img class='profile_pic' src='" . $igUser["data"]["profile_picture"] . "'></a>";
+    ?>
+  </div><a target='_blank' href="https://www.instagram.com/santerinogelainen/"><h2><?php
+    echo $igUser["data"]["username"];
+  ?></h2></a><div class="images"><?php
+    getIGPictures(3);
+  ?></div>
+</div>
+
+<?php
+endif;
+?>
