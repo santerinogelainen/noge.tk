@@ -1,0 +1,81 @@
+{
+  "about_me": {
+    "title": "Title here",
+    "questions": [
+      ["Question 1", "Answer 1"],
+      ["Question 2", "Answer 2"],
+      ["Question 3", "Answer 3"],
+      ["Question 4", "Answer 4"],
+      ["Question 5", "Answer 5", "#"],
+      ["Question 6", "Answer 6"],
+      ["Question 7", "Answer 7"],
+      ["Question 8", "Answer 8", "#"],
+      ["Question 9", "Answer 9"],
+      ["Question 10", "Answer 10"],
+      ["Question 11", "Answer 11"]
+    ]
+  },
+  "about_web": {
+    "title": "Title here",
+    "questions": [
+      ["Question 1", "Answer 1"],
+      ["Question 2", "Answer 2"],
+      ["Question 3", "Answer 3"],
+      ["Question 4", "Answer 4"],
+      ["Question 5", "Answer 5", "#"]
+    ]
+  },
+  "errors": {
+    "404": "Your 404 error message here",
+    "400": "Your 400 error message here",
+    "500": "Your 500 error message here"
+  },
+  "info": {
+    "question_1": "Q1 here",
+    "description": "Description here",
+    "question_2": "Q2 here",
+    "website_description": "Website description here",
+    "more_me": "Read more",
+    "more_web": "Read more",
+    "profile_pic": "Text here"
+  },
+  "links": {
+    "instagram": "https://www.instagram.com/santerinogelainen/",
+    "facebook": "https://www.facebook.com/santeri.nogelainen",
+    "steam": "https://steamcommunity.com/id/pinguu9999",
+    "twitter": "https://twitter.com/santerinog",
+    "twitch": "http://www.twitch.tv/lizardsn/profile",
+    "tumblr": "http://ttypical.tumblr.com/",
+    "vsco": "http://santerinogelainen.vsco.co",
+    "youtube": "https://www.youtube.com/channel/UCPEtpMuMht91_aJkmE_acZg",
+    "soundcloud": "https://soundcloud.com/pinguu9999",
+    "lastfm": "http://www.last.fm/user/pinguu9999",
+    "osu": "http://new.ppy.sh/u/7197109"
+  },
+  "menu": [
+    "INFORMATION",
+    "LINKS",
+    "GITHUB",
+    "PICTURES"
+  ],
+  "text": {
+    "bio": "Bio here",
+    "title": "Title here",
+    "html_title": "Tab title here",
+    "header": "IDK"
+  },
+  "usernames": {
+    "snapchat": [
+      "Snapchat",
+      "Username here",
+      "Description here",
+      "#"
+    ],
+    "battle_net": [
+      "Battle.net",
+      "Username here",
+      "Description here"
+    ]
+  }
+
+}

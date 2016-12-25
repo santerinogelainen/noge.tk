@@ -1,6 +1,12 @@
+<?php
+include 'script.php';
+?>
+
 <!doctype html>
 <html lang="fi">
 	<head>
+
+		<title>Links</title>
 
 	<!-- links -->
 	<link rel="stylesheet" type="text/css" href='styles.css'/>
@@ -13,9 +19,6 @@
 
 	<meta name="viewport" content="width=device-width, user-scalable=no" />
 
-	<?php
-	include 'script.php';
-	?>
 	</head>
 	<body>
 
@@ -23,22 +26,22 @@
 		<div id="expand"></div>
 		<div id="menu">
 
-			<a href="http://noge.tk"><img id="side_logo" src="../img/logo_white.png"></a>
+			<a href="../"><img id="side_logo" src="../img/logo_white.png"></a>
 
-			<a href="http://noge.tk/information/"><div id="information" class="menu_item"><?php
-				echo strtolower(getSQL("title", "menu")[0]);
+			<a href="../information/"><div id="information" class="menu_item"><?php
+				echo strtolower($json["menu"][0]);
 			?></div></a>
 			<a href="https://github.com/santerinogelainen"><div id="github" class="menu_item"><?php
-				echo strtolower(getSQL("title", "menu")[2]);
+				echo strtolower($json["menu"][2]);
 			?></div></a>
-			<a href="http://noge.tk/photos"><div id="photos" class="menu_item"><?php
-				echo strtolower(getSQL("title", "menu")[3]);
+			<a href="../pictures/"><div id="photos" class="menu_item"><?php
+				echo strtolower($json["menu"][3]);
 			?></div></a>
 		</div>
 
 		<h1>
 		<?php
-		echo "<span id='links'>" . getSQL("title", "menu")[1] . "</span>";
+		echo "<span id='links'>" . $json["menu"][1] . "</span>";
 		?>
 		</h1>
 

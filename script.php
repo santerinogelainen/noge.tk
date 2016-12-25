@@ -1,20 +1,22 @@
 <?php
-	
-	include 'config.php';
-	
-	
-	/* CONNECT TO DATABASE */
-	
-	
+
+	/*include 'config.php';
+
+
+	//CONNECT TO DATABASE
+
+
 	$conn = mysqli_connect($config["MYSQL"]["ip"], $config["MYSQL"]["username"], $config["MYSQL"]["password"], $config["MYSQL"]["database"]);
 	if (!$conn) {
 		die("Connection failed: " . mysqli_connect_error() . mysqli_connect_errno());
 	}
-	
-	
-	/* GET DATA FROM TABLES */
-	
-	
+
+
+
+
+	//GET DATA FROM TABLES
+
+
 	function getSQL($x,$y,$z = null, $toString = false) {
 		$sql = "SELECT " . $x . " FROM " . $y;
 		if (!empty($z)) {
@@ -25,10 +27,15 @@
 		while ($row = mysqli_fetch_array($result)) {
 			$array[] = $row[$x];
 		}
-		
+
 		if ($toString) {
 			$array = implode(" ", $array);
 		}
 		return $array;
-	}
+	}*/
+	ini_set("allow_url_fopen", 1);
+
+	$file = file_get_contents("json.json");
+	$json = json_decode($file, true);
+
 ?>

@@ -1,12 +1,16 @@
 <!-- TUMBLR -->
 
+<?php
+  $tumblr = jsonToArray("https://api.tumblr.com/v2/blog/ttypical.tumblr.com/posts/photo?api_key=", $config["TUMBLR"]["consumerkey"]);
+  if ($tumblr !== false):
+?>
+
 <div class="block" id="tumblr">
   <div class="widget_header">
     <div class="widget_name"><a target='_blank' href="http://ttypical.tumblr.com/">TUMBLR</a></div>
-    <a target='_blank' href="http://ttypical.tumblr.com/"><img class="profile_pic" src="http://api.tumblr.com/v2/blog/ttypical.tumblr.com/avatar/128"></a>
+    <a target='_blank' href="http://ttypical.tumblr.com/"><img class="profile_pic" src="https://api.tumblr.com/v2/blog/ttypical.tumblr.com/avatar/128"></a>
   </div>
   <a target='_blank' href="http://ttypical.tumblr.com/"><h2><?php
-    $tumblr = jsonToArray("https://api.tumblr.com/v2/blog/ttypical.tumblr.com/posts/photo?api_key=", $config["TUMBLR"]["consumerkey"]);
     echo $tumblr["response"]["blog"]["name"];
   ?></h2></a>
   <div class="images"><?php
@@ -18,3 +22,6 @@
     }
   ?></div>
 </div>
+<?php
+endif;
+?>

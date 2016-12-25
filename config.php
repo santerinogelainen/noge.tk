@@ -4,7 +4,7 @@
 
 	$config = array(
 			"IG" => array(
-				"IGtoken" => "IGtoken"
+				"IGtoken" => ""
 			),
 			"MYSQL" => array(
 					"ip" => "IP",
@@ -13,28 +13,31 @@
 					"database" => "database"
 			),
 			"TUMBLR" => array(
-					"consumerkey" => "tumblr consumer key here..."
+					"consumerkey" => ""
 			),
 			"TWITTER" => array(
-					"consumerkey" => "twitter consumer key here...",
-					"consumersecret" => "twitter consumer secret here...",
-					"token" => "twitter token here...",
-					"tokensecret" => "twitter token secret here..."
+					"consumerkey" => "",
+					"consumersecret" => "",
+					"token" => "",
+					"tokensecret" => ""
 			),
 			"OSU" => array(
-					"apikey" => "osu api key here"
+					"apikey" => ""
 			),
 			"LASTFM" => array(
-					"apikey" => "last fm key here"
+					"apikey" => ""
 			),
 			"STEAM" => array(
-					"apikey" => "steam key here"
+					"apikey" => ""
 			),
 			"YOUTUBE" => array(
-					"apikey" => "youtube key here"
+					"apikey" => ""
 			),
 			"SOUNDCLOUD" => array(
-					"clientid" => "soundcloud key here"
+					"clientid" => ""
+			),
+			"TWITCH" => array(
+				"clientid" => ""
 			)
 	);
 ?>

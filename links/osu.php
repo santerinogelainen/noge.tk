@@ -1,12 +1,16 @@
 <!-- OSU -->
 
+<?php
+  $osu = jsonToArray("https://osu.ppy.sh/api/get_user?u=7197109&k=", $config["OSU"]["apikey"]);
+if ($osu !== false):
+?>
+
 <div class="block" id="osu">
   <div class="widget_header">
     <div class="widget_name"><a target='_blank' href="https://osu.ppy.sh/u/7197109">OSU</a></div>
     <a target='_blank' href="https://osu.ppy.sh/u/7197109"><img class="profile_pic" src="https://a.ppy.sh/7197109"></a>
   </div>
   <a target='_blank' href="https://osu.ppy.sh/u/7197109"><h2><?php
-    $osu = jsonToArray("https://osu.ppy.sh/api/get_user?u=7197109&k=", $config["OSU"]["apikey"]);
     echo $osu[0]["username"];
   ?></h2></a>
   <div id="osu_preview">
@@ -23,3 +27,7 @@
 
   </div>
 </div>
+
+<?php
+endif;
+?>

@@ -1,6 +1,12 @@
+<?php
+include 'script.php';
+?>
+
 <!doctype html>
 <html lang="fi">
 	<head>
+
+	<title>Information</title>
 
 	<!-- links -->
 	<link rel="stylesheet" type="text/css" href='styles.css'/>
@@ -13,9 +19,6 @@
 
 	<meta name="viewport" content="width=device-width, user-scalable=no" />
 
-	<?php
-	include 'script.php';
-	?>
 	</head>
 	<body>
 
@@ -23,27 +26,27 @@
 		<div id="expand"></div>
 		<div id="menu">
 
-			<a href="http://noge.tk"><img id="side_logo" src="../img/logo_white.png"></a>
-			<a href="http://noge.tk/links/"><div id="links" class="menu_item"><?php
-				echo strtolower(getSQL("title", "menu")[1]);
+			<a href="../"><img id="side_logo" src="../img/logo_white.png"></a>
+			<a href="../links/"><div id="links" class="menu_item"><?php
+				echo strtolower($json["menu"][1]);
 			?></div></a>
 			<a href="https://github.com/santerinogelainen"><div id="github" class="menu_item"><?php
-				echo strtolower(getSQL("title", "menu")[2]);
+				echo strtolower($json["menu"][2]);
 			?></div></a>
-			<a href="http://noge.tk/photos"><div id="photos" class="menu_item"><?php
-				echo strtolower(getSQL("title", "menu")[3]);
+			<a href="../pictures/"><div id="photos" class="menu_item"><?php
+				echo strtolower($json["menu"][3]);
 			?></div></a>
 		</div>
 
 		<h1>
 		<?php
-		echo "<span id='info'>" . substr(getSQL("title", "menu")[0], 0, 4) . "</span><span id='information'>" . substr(getSQL("title", "menu")[0], -7) . "</span>";
+		echo "<span id='info'>" . substr($json["menu"][0], 0, 4) . "</span><span id='information'>" . substr($json["menu"][0], -7) . "</span>";
 		?>
 		</h1>
 
 		<div id="content">
 			<h2><?php
-				echo getSQL("content", "info")[1];
+				echo $json["info"]["question_1"];
 			?></h2>
 
 			<hr>
@@ -52,34 +55,34 @@
 				<div id="profile">
 				<img id="profile_photo" src="https://api.tumblr.com/v2/blog/ttypical.tumblr.com/avatar/512">
 				<h3 id="profile_title"><?php
-					echo getSQL("content", "info")[6];
+					echo $json["info"]["profile_pic"];
 				?></h3>
 				</div>
 				<div id="introduction"><?php
-					echo getSQL("content", "info")[0];
+					echo $json["info"]["description"];
 				?></div>
 			</div>
 
 			<hr>
 
 			<h2><?php
-				echo getSQL("content", "info")[2];
+				echo $json["info"]["question_2"];
 			?></h2>
 
 			<hr>
 
 			<div id="website_intro"><?php
-				echo getSQL("content", "info")[3];
+				echo $json["info"]["website_description"];
 			?></div>
 
 			<div id="more">
 				<table id="more_table">
 					<tr>
 						<td id="me" class="click_expand"><?php
-							echo getSQL("content", "info")[4];
+							echo $json["info"]["more_me"];
 						?></td>
 						<td id="website" class="click_expand"><?php
-							echo getSQL("content", "info")[5];
+							echo $json["info"]["more_web"];
 						?></td>
 					</tr>
 				</table>
@@ -87,24 +90,20 @@
 					<table id="me_table">
 						<tr>
 							<th colspan="2" id="me_table_header">
-								<span id="abbr"><?php
-									echo getSQL("question", "about_me")[2];
-								?></span>
-								 -
 								<span id="full_title"><?php
-									echo getSQL("answer", "about_me")[2];
+									echo $json["about_me"]["title"];
 								?></span>
 							</th>
 						</tr>
 						<?php
 							$c = 0;
-							foreach (getSQL("id", "about_me", "id>0") as &$value) {
+							foreach ($json["about_me"]["questions"] as &$value) {
 								echo "<tr class='me_row'>
-								<td class='me_question'>" . getSQL("question", "about_me", "id>0")[$c] . "</td>";
-								if (is_null(getSQL("link", "about_me", "id>0")[$c])) {
-									echo "<td class='me_answer'>" . getSQL("answer", "about_me", "id>0")[$c] . "</td>";
-								} if (!is_null(getSQL("link", "about_me", "id>0")[$c])) {
-									echo "<td class='me_answer'><a href='" . getSQL("link", "about_me", "id>0")[$c] . "'>" . getSQL("answer", "about_me", "id>0")[$c] . "</a></td>";
+								<td class='me_question'>" . $json["about_me"]["questions"][$c][0] . "</td>";
+								if (!isset($json["about_me"]["questions"][$c][2])) {
+									echo "<td class='me_answer'>" . $json["about_me"]["questions"][$c][1] . "</td>";
+								} if (isset($json["about_me"]["questions"][$c][2])) {
+									echo "<td class='me_answer'><a href='" . $json["about_me"]["questions"][$c][2] . "'>" . $json["about_me"]["questions"][$c][1] . "</a></td>";
 								}
 								echo "</tr>";
 								$c++;
@@ -117,16 +116,16 @@
 						<tr>
 							<th colspan="2" id="website_table_header">
 								<?php
-									echo getSQL("answer", "about_website", "id=0", true);
+									echo $json["about_web"]["title"];
 								?>
 							</th>
 						</tr>
 						<?php
 							$c = 0;
-							foreach (getSQL("id", "about_website", "id>0") as &$value) {
+							foreach ($json["about_web"]["questions"] as &$value) {
 								echo "<tr class='website_row'>
-								<td class='website_question'>" . getSQL("what", "about_website", "id>0")[$c] . "</td>
-								<td class='website_answer'>" . getSQL("answer", "about_website", "id>0")[$c] . "</td>
+								<td class='website_question'>" . $json["about_web"]["questions"][$c][0] . "</td>
+								<td class='website_answer'>" . $json["about_web"]["questions"][$c][1] . "</td>
 								</tr>";
 								$c++;
 							}

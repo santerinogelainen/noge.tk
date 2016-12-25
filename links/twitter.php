@@ -4,7 +4,7 @@
     <div class="widget_name"><a target='_blank' href="https://twitter.com/@santerinog">TWITTER</a></div>
     <?php
       $user = $connection->get("users/show", ["user_id" => "245851179"]);
-      echo "<a target='_blank' href='https://twitter.com/@santerinog'><img class='profile_pic' src='" . $user->profile_image_url . "'></a>";
+      echo "<a target='_blank' href='https://twitter.com/@santerinog'><img class='profile_pic' src='" . $user->profile_image_url_https . "'></a>";
     ?>
   </div>
   <a target='_blank' href="https://twitter.com/@santerinog"><h2><?php
@@ -18,7 +18,7 @@
     }
     echo "<div class='preview'>";
     if (property_exists($user->status->entities, "media")) {
-      echo "<img class='img' src='" . $user->status->entities->media[0]->media_url . ":thumb'>";
+      echo "<img class='img' src='" . $user->status->entities->media[0]->media_url_https . ":thumb'>";
       echo "<div class='with_img'>";
     } else {
       echo "<div class='without_img'>";

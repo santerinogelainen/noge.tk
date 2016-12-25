@@ -2,7 +2,7 @@
 
 	include '../config.php';
 
-	/* CONNECT TO DATABASE */
+	/* //CONNECT TO DATABASE
 
 
 	$conn = mysqli_connect($config["MYSQL"]["ip"], $config["MYSQL"]["username"], $config["MYSQL"]["password"], $config["MYSQL"]["database"]);
@@ -11,7 +11,7 @@
 	}
 
 
-	/* GET DATA FROM TABLES */
+	//GET DATA FROM TABLES
 
 
 	function getSQL($x,$y,$z = null, $toString = false) {
@@ -29,16 +29,21 @@
 			$array = implode(" ", $array);
 		}
 		return $array;
-	}
+	}*/
 
 	/*BASIC PARSER FROM JSON TO A PHP ASSOC ARRAY. ARGUMENTS ARE A LINK AND AN ACCESS TOKEN / CONSUMER KEY*/
 
 	function jsonToArray($url, $access_token = "", $toAssoc = true) {
 		if ($access_token === "") {
-			$content = file_get_contents($url);
+			@$content = file_get_contents($url);
 		} else {
-			$content = file_get_contents($url . $access_token);
+			@$content = file_get_contents($url . $access_token);
 		}
+
+		if ($content == false) {
+			return false;
+		}
+
 		return $json = json_decode($content, $toAssoc);
 	}
 
@@ -60,4 +65,9 @@
 			$n--;
 		}
 	}
+
+	ini_set("allow_url_fopen", 1);
+
+	$file = file_get_contents("../json.json");
+	$json = json_decode($file, true);
 ?>

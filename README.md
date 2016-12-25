@@ -1,6 +1,6 @@
-﻿# noge.tk
+﻿#noge.tk
 
-My code for [noge.tk](http://noge.tk)
+My code for noge.tk (old site)
 
 The code is going to use MySQL or JSON for strings and hex codes (for colors) etc.
 

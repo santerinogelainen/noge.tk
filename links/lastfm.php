@@ -1,10 +1,15 @@
 <!-- LASTFM -->
 
+<?php
+$lastfmUser = jsonToArray("http://ws.audioscrobbler.com/2.0/?method=user.getinfo&user=pinguu9999&format=json&api_key=", $config["LASTFM"]["apikey"]);
+$lastTracks = jsonToArray("http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=pinguu9999&limit=5&format=json&api_key=", $config["LASTFM"]["apikey"], false);
+if ($lastfmUser !== false && $lastTracks !== false):
+?>
+
 <div class="block" id="lastfm">
   <div class="widget_header">
     <div class="widget_name"><a target='_blank' href="http://www.last.fm/user/pinguu9999">LAST.FM</a></div>
     <a target='_blank' href="http://www.last.fm/user/pinguu9999"><?php
-      $lastfmUser = jsonToArray("http://ws.audioscrobbler.com/2.0/?method=user.getinfo&user=pinguu9999&format=json&api_key=", $config["LASTFM"]["apikey"]);
       echo "<img class='profile_pic' src='" . $lastfmUser["user"]["image"][2]["#text"] . "'>";
     ?></a>
   </div>
@@ -13,7 +18,6 @@
   ?></h2></a>
   <div class="preview">
     <table><?php
-          $lastTracks = jsonToArray("http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=pinguu9999&limit=5&format=json&api_key=", $config["LASTFM"]["apikey"], false);
           $last = 0;
           while ($last < 5) {
             echo "<tr><td>";
@@ -31,3 +35,7 @@
     </table>
   </div>
 </div>
+
+<?php
+endif;
+?>
